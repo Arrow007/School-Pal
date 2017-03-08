@@ -66,7 +66,7 @@
           .then(function() {
             // The user was signed out sucessfully
             // Redirect the user to the login page
-            window.location.pathname = '/login/index.html';
+            window.location.pathname = window.location.pathname.split('/')[1] + '/login/index.html';
             $('.no-auth').hide();
           });
         // End the handeler
@@ -89,7 +89,7 @@
           .then(function() {
             // The user was signed out sucessfully
             // Redirect the user to the login page
-            window.location.pathname = '/login/index.html';
+            window.location.pathname = window.location.pathname.split('/')[1] + '/login/index.html';
           });
         // End the handeler
         break;
@@ -239,7 +239,7 @@
                 // Catch any errors thrown and feed them to the error handeler
                 .catch(FBErrorHandeler);
               // Redirect the user back to the home page
-              window.location.href = window.location.origin;
+              window.location.href = window.location.origin + '/' + window.location.pathname.split('/')[1]
             });
         } else {
           // The passwords didn't match each other
@@ -669,7 +669,7 @@
               });
             break;
           case 'Login':
-            window.location.href = window.location.origin;
+            window.location.href = window.location.origin + '/' + window.location.pathname.split('/')[1]
             break;
         }
       } else {
