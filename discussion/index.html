@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html class="page__home">
+
+<head>
+    <!-- Declare stylesheets for icons, fonts, and styling -->
+    <link type="text/css" rel="stylesheet" href="../css/default.css" />
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+
+    <!-- Set the title of the website -->
+    <title>School Pal</title>
+    <!-- Signal the browser that the site is mobile compatible -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" data-activates="navigator__side" class="button-collapse hide-on-large-only auth"><i class="material-icons">menu</i></a>
+            <a href="#" class="brand-logo center">Discussion</a>
+            <ul class="right hide-on-med-and-down auth">
+                <li>
+                    <a class="tooltip" data-position="bottom" data-tooltip="Home" href="/">
+                        <i class="material-icons">home</i>
+                    </a>
+                </li>
+                <li>
+                    <a class="tooltip" data-position="bottom" data-tooltip="Assignments" href="../assignments/index.html">
+                        <i class="material-icons">assignment</i>
+                    </a>
+                </li>
+                <li>
+                    <a class="tooltip" data-position="bottom" data-tooltip="Classes" href="../classes/index.html">
+                        <i class="material-icons">class</i>
+                    </a>
+                </li>
+                <li>
+                    <a class="tooltip" data-position="bottom" data-tooltip="Discussion" href="#">
+                        <i class="material-icons">message</i>
+                    </a>
+                </li>
+                <li>
+                    <a class="tooltip" data-position="bottom" data-tooltip="Notes" href="../notes/index.html">
+                        <i class="material-icons">note</i>
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-button tooltip" data-beloworigin="true" data-constrainwidth="false" data-position="bottom" data-tooltip="More" href="#" data-activates="menu__user">
+                        <i class="material-icons">more_vert</i>
+                    </a>
+                </li>
+                <ul id="menu__user" class="dropdown-content">
+                    <li>
+                        <span class="area__menu-name truncate">Placeholder Name</span>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a id="button__logout" href="#" class="waves-effect waves-red">Logout</a>
+                    </li>
+                </ul>
+
+            </ul>
+            <ul class="right no-auth">
+                <li>
+                    <a class="waves-effect waves-yellow btn" href="../login/index.html" data-activates="dropdown__authenticate">Login</a>
+                </li>
+            </ul>
+            <ul class="side-nav" id="navigator__side">
+                <li>
+                    <div class="deep-purple lighten-2 area__menu-user">
+                        <h6 class="area__menu-name truncate"><u>Placeholder Name</u></h6>
+                        <i class="area__menu-email truncate">email@provider.domain</i>
+                    </div>
+                </li>
+                <li>
+                    <a href="/">
+                        <i class="material-icons">home</i>Home
+                    </a>
+                </li>
+                <li>
+                    <a href="../assignments/index.html">
+                        <i class="material-icons">assignment</i>Assignments
+                    </a>
+                </li>
+                <li>
+                    <a href="../classes/index.html">
+                        <i class="material-icons">class</i>Classes
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons">message</i>Discussion
+                    </a>
+                </li>
+                <li>
+                    <a href="../notes/index.html">
+                        <i class="material-icons">note</i>Notes
+                    </a>
+                </li>
+                <a id="button__logout_sidenav" href="#" class="btn waves-effect waves-red">Logout</a>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="section__account-setup purple lighten-5">
+            <h4 class="center-align">Account Setup</h4>
+            <p class="center-align">Before you can begin using this app we need to know some things about you.</p>
+            <div class="valign-wrapper">
+                <div class="row">
+                    <div class="input-field">
+                        <select id="select__account-type">
+                            <option value="" disabled>Choose your option</option>
+                            <option value="student" selected>Student</option>
+                            <option value="teacher">Teacher</option>
+                        </select>
+                        <label>Account Type</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col l12">
+                    <textarea id="textarea__reason-for-use" class="materialize-textarea"></textarea>
+                    <label for="textarea__reason-for-use">Reason for Use(Optional)</label>
+                </div>
+            </div>
+            <div class="valign-wrapper">
+                <div class="row">
+                    <a class="waves-effect waves-light btn-large" id="button_submit-account-setup">Ok</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+    <!-- Load jQuery for use in other scripts -->
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+    <!-- Load the primary javascript file -->
+    <script type="text/javascript" src="../js/main.js"></script>
+</body>
+
+</html>

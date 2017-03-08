@@ -1,0 +1,73 @@
+.area__menu-user {
+    width: 100%;
+}
+
+.area__menu-name {
+    margin: 0px;
+    font-size: 24px;
+}
+
+.area__menu-email {
+    font-size: 15px;
+}
+
+.button__menu {
+    padding-left: 20px;
+}
+
+#button__logout_sidenav {
+    width: 90%;
+    bottom: 70px;
+    position: absolute !important;
+}
+
+.section__account-setup {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    z-index: 100000;
+}
+
+.page__home {
+    background: url("../images/background.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.auth {
+    display: none;
+}
+
+span.area__menu-name {
+    max-width: 175px;
+}
+
+#button__create-note,
+#button__create-assignment {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+#assignments-wrapper {
+    margin: 0px;
+}
+
+#overlay__view-assignment {
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+}
+
+#assignments-wrapper {
+    display: none;
+}
+
+.progress {
+    margin: 0px !important;
+}

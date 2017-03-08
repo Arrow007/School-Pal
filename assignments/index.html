@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<!-- Create the html document root tag -->
+<html class="page__home">
+
+<!-- Create the documents head tag-->
+
+<head>
+    <!-- Declare stylesheets for icons, fonts, and styling -->
+    <!-- Load the default stylesheet for the app -->
+    <link type="text/css" rel="stylesheet" href="../css/default.css" />
+    <!-- Load Google Icon Font -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Load the materializecss stylesheet to be utilized -->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+
+    <!-- Set the title of the website -->
+    <title>School Pal</title>
+    <!-- Signal the browser that the site is mobile compatible -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<!-- Create the documents body containg the pages content -->
+
+<body>
+    <!-- Create a nav element to contain the navbar content -->
+    <nav>
+        <!-- Create the navbar with a div classed nav-wrapper so materializecss knows its the navbar -->
+        <div class="nav-wrapper">
+            <!-- Create a button to open the side navigtor -->
+            <a href="#" data-activates="navigator__side" class="button-collapse hide-on-large-only auth">
+                <!-- Show a menu icon in the button -->
+                <i class="material-icons">menu</i>
+            </a>
+            <!-- Create title with page name and center it in the navbar -->
+            <a class="brand-logo center">Assignments</a>
+            <!-- Create a list containing navigation on the right side if the screen only to be shown when logged in -->
+            <ul class="right hide-on-med-and-down auth">
+                <!-- Create a new list item / navigation option for larger screens -->
+                <li>
+                    <!-- Create a link to the home page with the tooltip Home -->
+                    <a href="/" class="tooltip" data-position="bottom" data-tooltip="Home">
+                        <!-- Show a home icon for the link -->
+                        <i class="material-icons">home</i>
+                    </a>
+                </li>
+                <!-- Create a new list item / navigation option for larger screens -->
+                <li>
+                    <!-- Create a link to the assignments page with the tooltip Assignments -->
+                    <a class="tooltip" data-position="bottom" data-tooltip="Assignments">
+                        <!-- Show an assignments icon for the link -->
+                        <i class="material-icons">assignment</i>
+                    </a>
+                </li>
+                <!-- Create a new list item / navigation option for larger screens -->
+                <li>
+                    <!-- Create a link to the classes page with the tooltip CLasses -->
+                    <a href="../classes/index.html" class="tooltip" data-position="bottom" data-tooltip="Classes">
+                        <!-- Show a class icon for the link -->
+                        <i class="material-icons">class</i>
+                    </a>
+                </li>
+                <!-- Create a new list item / navigation option for larger screens -->
+                <li>
+                    <!-- Create a link to the discussion page with the tooltip Discussion -->
+                    <a href="../discussion/index.html" class="tooltip" data-position="bottom" data-tooltip="Discussion">
+                        <!-- Show a message icon for the link -->
+                        <i class="material-icons">message</i>
+                    </a>
+                </li>
+                <!-- Create a new list item / navigation option for larger screens -->
+                <li>
+                    <!-- Create a link to the notes page with the tooltip Notes -->
+                    <a href="../notes/index.html" class="tooltip" data-position="bottom" data-tooltip="Notes">
+                        <!-- Show a notes icon for the link -->
+                        <i class="material-icons">note</i>
+                    </a>
+                </li>
+                <!-- Create a new list item / navigation option for larger screens -->
+                <li>
+                    <!-- Create a button for the user menu button -->
+                    <a href="#" class="dropdown-button tooltip" data-beloworigin="true" data-constrainwidth="false" data-position="bottom" data-tooltip="More" data-activates="menu__user">
+                        <!-- Show a more icon in the button -->
+                        <i class="material-icons">more_vert</i>
+                    </a>
+                </li>
+                <!-- Create a list containg the user menu options -->
+                <ul id="menu__user" class="dropdown-content">
+                    <!-- Create a menu option for the users name -->
+                    <li>
+                        <!-- Create a span with the text Placeholder Name to be replace with the users name and truncate if too long -->
+                        <span class="area__menu-name truncate">Placeholder Name</span>
+                    </li>
+                    <!-- Create a divder to sperate the logout button from the rest of the options -->
+                    <li class="divider"></li>
+                    <!-- Create a menu option to logout -->
+                    <li>
+                        <!-- Create the button inside the menu option -->
+                        <a id="button__logout" href="#" class="waves-effect waves-red">Logout</a>
+                    </li>
+                </ul>
+            </ul>
+            <!-- Create a navigation section when the users is not logged in and display it on the right -->
+            <ul class="right no-auth">
+                <!-- Create a new list item / navigation option -->
+                <li>
+                    <!-- Create a link to the login page -->
+                    <a href="../login/index.html" class="waves-effect waves-yellow btn" data-activates="dropdown__authenticate">Login</a>
+                </li>
+            </ul>
+            <!-- Create a slide-out sidebar navigation list with the id navigator__side -->
+            <ul id="navigator__side" class="side-nav">
+                <!-- Create a list / navigation item -->
+                <li>
+                    <!-- Create a container for the users info -->
+                    <div class="deep-purple lighten-2 area__menu-user">
+                        <!-- Create a header with the text Placeholder Name to be repaced with the users name and truncate if too long -->
+                        <h6 class="area__menu-name truncate"><u>Placeholder Name</u></h6>
+                        <!-- Create an italic container with the text email@provider.domain to be replaced with the users email -->
+                        <i class="area__menu-email">email@provider.domain</i>
+                    </div>
+                </li>
+                <!-- Create a list / navigation item -->
+                <li>
+                    <!-- Create a link to the home page -->
+                    <a href="/">
+                        <!-- Show a home icon next to the text Home -->
+                        <i class="material-icons">home</i>Home
+                    </a>
+                </li>
+                <!-- Create a list / navigation item -->
+                <li>
+                    <!-- Create a link to the assignments page -->
+                    <a href="#">
+                        <!-- Show a assignment icon next to the text Assignments -->
+                        <i class="material-icons">assignment</i>Assignments
+                    </a>
+                </li>
+                <!-- Create a list / navigation item -->
+                <li>
+                    <!-- Create a link to the classes page -->
+                    <a href="../classes/index.html">
+                        <!-- Show a class icon next to the text Classes -->
+                        <i class="material-icons">class</i>Classes
+                    </a>
+                </li>
+                <!-- Create a list / navigation item -->
+                <li>
+                    <!-- Create a link to the discussion page -->
+                    <a href="../discussion/index.html">
+                        <!-- Show a home message next to the text Discussion -->
+                        <i class="material-icons">message</i>Discussion
+                    </a>
+                </li>
+                <!-- Create a list / navigation item -->
+                <li>
+                    <!-- Create an item for this page -->
+                    <a href="../notes/index.html">
+                        <!-- Show a note icon next to the text Notes -->
+                        <i class="material-icons">note</i>Notes
+                    </a>
+                </li>
+                <!-- Create a logout button to be put at the bottom of the menu with the id button__logout -->
+                <a id="button__logout_sidenav" class="waves-effect waves-red btn button__side-menu-logout">Logout</a>
+            </ul>
+        </div>
+    </nav>
+    <!-- Create the main element to contain the pages primary content -->
+    <main>
+        <!-- Create a div to show when there is a user logged in -->
+        <div class="auth">
+            <div class="progress">
+                <div class="indeterminate"></div>
+            </div>
+            <!-- Create a div to contain the account setup overlay -->
+            <div class="section__account-setup purple lighten-5">
+                <!-- Create a header to contain the overlay name -->
+                <h4 class="center-align">Account Setup</h4>
+                <!-- Create a paragraph element to give context to the overlay -->
+                <p class="center-align">Before you can begin using this app we need to know some things about you.</p>
+                <!-- Create a vertical alignment wrapper to verticaly align content -->
+                <div class="valign-wrapper">
+                    <!-- Create a new row to organize the UI -->
+                    <div class="row">
+                        <!-- Create a new input-field wrapper -->
+                        <div class="input-field">
+                            <!-- Create a selection area -->
+                            <select id="select__account-type">
+                                <!-- Add instructions for the selection area -->
+                                <option value="" disabled>Choose your option</option>
+                                <!-- Add an option to the selection area for a student account -->
+                                <option value="student" selected>Student</option>
+                                 <!-- Add an option to the selection area for a teacher account -->
+                                <option value="teacher">Teacher</option>
+                            </select>
+                            <!-- Create a label for the input-field -->
+                            <label>Account Type</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Create a new row to organize the UI -->
+                <div class="row">
+                    <!-- Create an input-field wrapper that always full width -->
+                    <div class="input-field col l12">
+                        <!-- Create a text area to collect feedback on the users reason for use -->
+                        <textarea id="textarea__reason-for-use" class="materialize-textarea"></textarea>
+                        <!-- Cretae a label for the input-field -->
+                        <label for="textarea__reason-for-use">Reason for Use(Optional)</label>
+                    </div>
+                </div>
+                <!-- Create a vertical alignment wrapper to verticaly align content -->
+                <div class="valign-wrapper">
+                    <!-- Creare a new row to organize the UI -->
+                    <div class="row">
+                        <!-- Create a button to submit the account setup data with the id button_submit-account-setup -->
+                        <a id="button_submit-account-setup" class="waves-effect waves-light btn-large">Ok</a>
+                    </div>
+                </div>
+            </div>
+            <ul id="assignments-wrapper" class="collection">
+                <li v-for="assignment in assignment" :id="assignment.id" :key="assignment.id" class="collection-item avatar">
+                    <i class="material-icons circle">assignment</i>
+                    <span class="title col ">{{ assignment.details.name }} - <i>{{ assignment.details.class }}</i></span>
+                    <a href="#" class="right waves-effect waves-gray red-text" v-on:click="deleteAssignment(assignment.id)"><i class="material-icons">delete</i></a>
+                    <a href="#" class="right waves-effect waves-green" v-on:click="editAssignment(assignment.id, assignment.details)"><i class="material-icons">edit</i></a>
+                    <a href="#" class="right waves-effect waves-green black-text" v-on:click="viewAssignment(assignment.id,assignment.details)"><i class="material-icons">fullscreen</i></a>
+                    <p>
+                        <b>Details</b>
+                        <span class="truncate">{{ assignment.details.details }}</span>
+                        <b>Due</b>
+                        <br>
+                        <span>{{ assignment.details.due }}</span>
+                    </p>
+                </li>
+            </ul>
+            <div id="modal__view-assignment" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                    <div class="row">
+                        <h4 id="view-assignment_title" class="col s10"></h4>
+                        <a class="waves-effect waves-light btn-flat right modal-close">
+                            <!-- Show a close icon in the close button -->
+                            <i class="material-icons">close</i>
+                        </a>
+                        <br>
+                        <h4 id="view-assignment_class" class="col s10"></h4>
+                    </div>
+                    <div class="section">
+                        <h5>Details</h5>
+                        <p id="view-assignment_details"></p>
+                    </div>
+                    <div class="divider"></div>
+                    <h5>Due</h5>
+                    <span id="view-assignment_due"></span>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
+                </div>
+            </div>
+            <div id="modal__create-edit-assignment" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                    <div class="row">
+                        <h4 class="col s8">Edit Assignment</h4>
+                        <a id="button__close-create-edit-assignment" class="waves-effect waves-light btn-flat right">
+                            <!-- Show a close icon inside the button -->
+                            <i class="material-icons">close</i>
+                        </a>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <!-- Create a input-field wrapper -->
+                            <div class="input-field col l8 s12">
+                                <!-- Create an input element with the id text__create-edit-assignment-name -->
+                                <input id="text__create-edit-assignment-name" type="text" class="validate create-edit-assignment-field create-edit-assignment-required">
+                                <!-- Create a label for the input-field -->
+                                <label for="text__create-edit-note-name">Name</label>
+                            </div>
+                            <!-- Create a input-field wrapper -->
+                            <div class="input-field col l4 s12">
+                                <!-- Create an input element with the id text__create-edit-assignment-class -->
+                                <input id="text__create-edit-assignment-class" type="text" class="validate create-edit-assignment-field">
+                                <!-- Create a label for the input-field -->
+                                <label for="text__create-edit-note-name">Class</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="section">
+                        <h5>Due(Optional)</h5>
+                        <div class="row">
+                            <a id="button__open-assignment-due-date-picker" class="waves-effect waves-light btn tooltip col s12" data-position="bottom" data-tooltip="Open a date picker to set a due date">Set Due Date</a>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col l5 s12">
+                                <input id="number__assignment-hour-due" class="validate create-edit-assignment-field" type="number" min="0" max="12">
+                                <label for="number__assignment-due">Hour</label>
+                            </div>
+                            <div class="input-field col l5 s12">
+                                <input id="number__assignment-minute-due" class="validate create-edit-assignment-field" type="number" min="0" max="59">
+                                <label for="number__assignment-due">Minute</label>
+                            </div>
+                            <div class="input-field col l2 s12">
+                                <select id="select__assignment-am-pm" class="create-edit-assignment-field">
+                                <option value="" disabled selected></option>
+                                <option value="am">AM</option>
+                                <option value="pm">PM</option>
+                            </select>
+                                <label for="select__assignment-am-pm">AM / PM</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="text__create-edit-assignment-details" class="validate create-edit-assignment-field" type="text" data-length="150">
+                            <label for="input_text">Details</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a id="button__finish-create-edit-assignment" href="#" class="modal-action waves-effect btn-flat">Ok</a>
+                </div>
+            </div>
+            <input id="date__create-edit-assignment-due-date" type="date" class="datepicker" hidden>
+            <a id="button__create-assignment" class="btn-floating btn-large waves-effect waves-green blue right" data-target="modal__create-edit-assignment">
+                <!-- Show a plus icon in the button -->
+                <i class="material-icons">add</i>
+            </a>
+        </div>
+    </main>
+    <!-- Load Firebase to use its authentication and database -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+    <!-- Load jQuery for use in other scripts and utility methods -->
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <!-- Load materializecss because it is used for a lot of the UI -->
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+    <!-- Load Vue js to simplify DOM management -->
+    <script type="text/javascript" src="../js/vue.min.js"></script>
+    <script type="text/javascript" src="../js/moment.min.js"></script>
+    <!-- Load the primary javascript file -->
+    <script type="text/javascript" src="../js/main.js"></script>
+</body>
+
+</html>

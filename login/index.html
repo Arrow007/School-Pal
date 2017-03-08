@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!-- Create the html document root tag -->
+<html>
+
+<!-- Create the documents head -->
+
+<head>
+    <!-- Load Google Icon Font -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Load the materializecss stylesheet to be utilized -->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+
+    <!-- Set the title of the website -->
+    <title>School Pal</title>
+    <!-- Let browser know website is optimized for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<!-- Create the documents body containg the pages content -->
+
+<body>
+    <!-- Create a nav element to contain the navbar content -->
+    <nav>
+        <!-- Create the navbar with a div classed nav-wrapper so materializecss knows its the navbar -->
+        <div class="nav-wrapper">
+            <!-- Create title with page name and center it in the navbar -->
+            <a href="#" class="brand-logo center">Login</a>
+        </div>
+    </nav>
+    <!-- Create the main element to contain the pages primary content -->
+    <main>
+        <!-- Create a div to show when there is no user logged in -->
+        <div class="no-auth">
+            <!-- Create an element with the class tabs to utilize materializecss's tabs for Login and Signup -->
+            <ul class="tabs">
+                <!-- Create an element to contain the tabs in one row -->
+                <div class="row">
+                    <!-- Create a button(tab) for the login tab -->
+                    <li class="tab col l6"><a href="#tab__login">Login</a></li>
+                    <!-- Create a button(tab) for the signup tab -->
+                    <li class="tab col l6"><a href="#tab__signup">Signup</a></li>
+                </div>
+            </ul>
+            <!-- Create a div containing the content for the login tab -->
+            <div id="tab__login">
+                <!-- Create an element to wrap the email text field on a single line -->
+                <div class="row">
+                    <!-- Create an element for wrapping the text field -->
+                    <div class="input-field">
+                        <!-- Create the element for the user to put their email into -->
+                        <input id="text__login-email" type="email" class="validate login__field">
+                        <!--  Create a label for the email input element to be shown -->
+                        <label for="text__login-email">Email</label>
+                    </div>
+                </div>
+                <!-- Create an element to wrap the password text field on a single line -->
+                <div class="row">
+                    <!-- Create an element for wrapping the text field -->
+                    <div class="input-field">
+                        <!-- Create the element for the user to put their password into -->
+                        <input id="text__login-password" type="password" class="validate login__field">
+                        <!--  Create a label for the password input element to be shown -->
+                        <label for="text__login-password">Password</label>
+                    </div>
+                </div>
+                <!-- Create an element to wrap the buttons on a single line -->
+                <div class="row">
+                    <!-- Create a button for the user to login with the data provided -->
+                    <a class="waves-effect waves-light btn-large col l5 s6" id="button__login-password">Login</a>
+                    <!-- Create a button to login with a Google account in a popup -->
+                    <a class="waves-effect waves-light btn-flat btn-large col l4 s6" id="button__login-google">Google</a>
+                </div>
+            </div>
+            <!-- Create an element to contain the signup tabs content -->
+            <div id="tab__signup">
+                <!-- Create an element to wrap the first name text field on a single line -->
+                <div class="row">
+                    <!-- Create an element for wrapping the text field -->
+                    <div class="input-field">
+                        <!-- Create the element for the user to put their first name into -->
+                        <input id="text__signup-first-name" type="text" class="validate signup__field">
+                        <!--  Create a label for the signup first name input element to be shown -->
+                        <label for="text__signup-first-name">First Name</label>
+                    </div>
+                </div>
+                <!-- Create an element to wrap the last name text field on a single line -->
+                <div class="row">
+                    <!-- Create an element for wrapping the text field -->
+                    <div class="input-field">
+                        <!-- Create the element for the user to put their last name into -->
+                        <input id="text__signup-last-name" type="text" class="validate signup__field">
+                        <!--  Create a label for the signup last name input element to be shown -->
+                        <label for="text__signup-last-name">Last Name</label>
+                    </div>
+                </div>
+                <!-- Create an element to wrap the password text field on a single line -->
+                <div class="row">
+                    <!-- Create an element for wrapping the text field -->
+                    <div class="input-field">
+                        <!-- Create the element for the user to put their password into -->
+                        <input id="text__signup-password" type="password" class="validate signup__field">
+                        <!--  Create a label for the singup password input element to be shown -->
+                        <label for="text__signup-password">Password</label>
+                    </div>
+                </div>
+                <!-- Create an element to wrap the password confirm text field on a single line -->
+                <div class="row">
+                    <!-- Create an element for wrapping the text field -->
+                    <div class="input-field">
+                        <!-- Create the element for the user to put their password to confirm into -->
+                        <input id="text__signup-password-confirm" type="password" class="validate signup__field">
+                        <!-- Create a label for the signup password confirm input element to be shown -->
+                        <label for="text__signup-password-confirm">Password(Confirm)</label>
+                    </div>
+                </div>
+                <!-- Create an element to wrap the email text field on a single line -->
+                <div class="row">
+                    <!-- Create an element for wrapping the text field -->
+                    <div class="input-field">
+                        <!-- Create the element for the user to put their email into -->
+                        <input id="text__signup-email" type="email" class="validate signup__field">
+                        <!-- Create a label for the signup email element to be shown -->
+                        <label for="text__signup-email" data-error="Invalid Email">Email</label>
+                    </div>
+                </div>
+                <!-- Create an element to wrap the signup button on a single line -->
+                <div class="row">
+                    <!-- Create a button for the user to click when the signup form is complete to validate and then create their account -->
+                    <a class="waves-effect waves-light btn-large" id="button__signup">Signup</a>
+                </div>
+            </div>
+        </div>
+        <!-- Create a div to show when there is a user logged in -->
+        <div class="auth">
+            <!-- Create a header telling the user they are already logged in -->
+            <h4 class="center-align">You Are Already Logged In!</h4>
+            <div class="row">
+                <!-- Create a button for the user to click to return to the home page -->
+                <div class="col s4 m4 l5">
+                </div>
+                <div class="col s4 m4 l2">
+                    <a href="/" class="waves-effect waves-light btn-large">Back Home</a>
+                </div>
+                <div class="col s4 m4 l5">
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Load the firebase script for utilization -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+    <!-- Load jQuery for use in other scripts -->
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <!-- Load MaterializeCss for use on the site -->
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+    <!-- Load the primary javascript file -->
+    <script type="text/javascript" src="../js/main.js"></script>
+</body>
+
+</html>
