@@ -606,7 +606,6 @@
               });
             break;
           case 'Assignments':
-            var HasAssignments = false;
             var AssignmentsHandeler = new Vue({
               el: '#assignments-wrapper', // Tell the handeler what element should be used
               data: { // Create a template data set for the element
@@ -635,16 +634,6 @@
               },
             });
             firebase.database().ref('/users/' + firebase.auth().currentUser.uid + '/assignments/')
-              .once('value')
-              .then(function(snapshot) {
-                if (snapshot.hasChildren()) {
-                  HasAssignments = true;
-                } else {
-                  HasAssignments = false;
-                  $('.progress').hide();
-                }
-              });
-            firebase.database().ref('/users/' + firebase.auth().currentUser.uid + '/assignments/')
               // Listen for a new note to be added / handel the current notes
               .on('child_added', function(snapshot) {
                 // A new note has been added
@@ -653,7 +642,6 @@
                   id: snapshot.key, // Set the id of the note
                   details: snapshot.val(), // Set the name / message of the note
                 });
-                $('.progress').hide();
                 $('#assignments-wrapper').show();
               });
             firebase.database().ref('/users/' + firebase.auth().currentUser.uid + '/assignments/')
