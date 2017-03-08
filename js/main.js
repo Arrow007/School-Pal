@@ -1,5 +1,5 @@
-(function() {
-  'use strict';
+//(function() {
+  //'use strict';
 
   /*
     All functions are defined here
@@ -669,4 +669,4 @@
       }
     });
   });
-}());
+//}());
