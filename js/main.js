@@ -436,7 +436,7 @@
           ' ' + $('#number__assignment-hour-due').val() +
           ':' + $('#number__assignment-minute-due').val() +
           ' ' + $('#select__assignment-am-pm').val(), "D MMMM YYYY hh:mm a").toString();
-        if ($('#modal__create-edit-assignment').attr('data-id').length == 0) {
+        if (!$('#modal__create-edit-assignment').attr('data-id')) {
           firebase.database()
             .ref('/users/' + firebase.auth().currentUser.uid + '/assignments/')
             .push({
