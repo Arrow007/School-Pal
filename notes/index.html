@@ -233,7 +233,7 @@
                             <!-- Create a button to edit the note then call the method viewNote and pass it the note id -->
                             <a href="#" v-on:click="editNote(note.id,note.details.name,note.details.message)">Edit</a>
                             <!-- Create a button to delete the note then call the method deleteNote and pass it the note id -->
-                            <a href="#" v-on:click="deleteNote(note.id)">Delete</a>
+                            <a href="#" v-on:click="deleteNote(note.id)" class="text-red">Delete</a>
                         </div>
                     </div>
                 </div>
