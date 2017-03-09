@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!-- Create the html document root tag -->
 <html class="page__home">
@@ -32,7 +33,7 @@
                 <i class="material-icons">menu</i>
             </a>
             <!-- Create title with page name and center it in the navbar -->
-            <a class="brand-logo center">Assignments</a>
+            <a class="brand-logo center">work</a>
             <!-- Create a list containing navigation on the right side if the screen only to be shown when logged in -->
             <ul class="right hide-on-med-and-down auth">
                 <!-- Create a new list item / navigation option for larger screens -->
@@ -45,10 +46,10 @@
                 </li>
                 <!-- Create a new list item / navigation option for larger screens -->
                 <li>
-                    <!-- Create a link to the assignments page with the tooltip Assignments -->
-                    <a class="tooltip" data-position="bottom" data-tooltip="Assignments">
-                        <!-- Show an assignments icon for the link -->
-                        <i class="material-icons">assignment</i>
+                    <!-- Create a link to the work page with the tooltip work -->
+                    <a class="tooltip" data-position="bottom" data-tooltip="work">
+                        <!-- Show an work icon for the link -->
+                        <i class="material-icons">Work</i>
                     </a>
                 </li>
                 <!-- Create a new list item / navigation option for larger screens -->
@@ -129,10 +130,10 @@
                 </li>
                 <!-- Create a list / navigation item -->
                 <li>
-                    <!-- Create a link to the assignments page -->
+                    <!-- Create a link to the work page -->
                     <a href="#">
-                        <!-- Show a assignment icon next to the text Assignments -->
-                        <i class="material-icons">assignment</i>Assignments
+                        <!-- Show a Work icon next to the text work -->
+                        <i class="material-icons">Work</i>work
                     </a>
                 </li>
                 <!-- Create a list / navigation item -->
@@ -218,50 +219,50 @@
                     </div>
                 </div>
             </div>
-            <ul id="assignments-wrapper" class="collection">
-                <li v-for="assignment in assignment" :id="assignment.id" :key="assignment.id" class="collection-item avatar">
-                    <i class="material-icons circle">assignment</i>
-                    <span class="title col ">{{ assignment.details.name }} - <i>{{ assignment.details.class }}</i></span>
-                    <a href="#" class="right waves-effect waves-gray red-text" v-on:click="deleteAssignment(assignment.id)"><i class="material-icons">delete</i></a>
-                    <a href="#" class="right waves-effect waves-green" v-on:click="editAssignment(assignment.id, assignment.details)"><i class="material-icons">edit</i></a>
-                    <a href="#" class="right waves-effect waves-green black-text" v-on:click="viewAssignment(assignment.id,assignment.details)"><i class="material-icons">fullscreen</i></a>
+            <ul id="work-wrapper" class="collection">
+                <li v-for="Work in Work" :id="Work.id" :key="Work.id" class="collection-item avatar">
+                    <i class="material-icons circle">Work</i>
+                    <span class="title col ">{{ Work.details.name }} - <i>{{ Work.details.class }}</i></span>
+                    <a href="#" class="right waves-effect waves-gray red-text" v-on:click="deleteWork(Work.id)"><i class="material-icons">delete</i></a>
+                    <a href="#" class="right waves-effect waves-green" v-on:click="editWork(Work.id, Work.details)"><i class="material-icons">edit</i></a>
+                    <a href="#" class="right waves-effect waves-green black-text" v-on:click="viewWork(Work.id,Work.details)"><i class="material-icons">fullscreen</i></a>
                     <p>
                         <b>Details</b>
-                        <span class="truncate">{{ assignment.details.details }}</span>
+                        <span class="truncate">{{ Work.details.details }}</span>
                         <b>Due</b>
                         <br>
-                        <span>{{ assignment.details.due }}</span>
+                        <span>{{ Work.details.due }}</span>
                     </p>
                 </li>
             </ul>
-            <div id="modal__view-assignment" class="modal modal-fixed-footer">
+            <div id="modal__view-Work" class="modal modal-fixed-footer">
                 <div class="modal-content">
                     <div class="row">
-                        <h4 id="view-assignment_title" class="col s10"></h4>
+                        <h4 id="view-Work_title" class="col s10"></h4>
                         <a class="waves-effect waves-light btn-flat right modal-close">
                             <!-- Show a close icon in the close button -->
                             <i class="material-icons">close</i>
                         </a>
                         <br>
-                        <h4 id="view-assignment_class" class="col s10"></h4>
+                        <h4 id="view-Work_class" class="col s10"></h4>
                     </div>
                     <div class="section">
                         <h5>Details</h5>
-                        <p id="view-assignment_details"></p>
+                        <p id="view-Work_details"></p>
                     </div>
                     <div class="divider"></div>
                     <h5>Due</h5>
-                    <span id="view-assignment_due"></span>
+                    <span id="view-Work_due"></span>
                 </div>
                 <div class="modal-footer">
                     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
                 </div>
             </div>
-            <div id="modal__create-edit-assignment" class="modal modal-fixed-footer">
+            <div id="modal__create-edit-Work" class="modal modal-fixed-footer">
                 <div class="modal-content">
                     <div class="row">
-                        <h4 class="col s8">Edit Assignment</h4>
-                        <a id="button__close-create-edit-assignment" class="waves-effect waves-light btn-flat right">
+                        <h4 class="col s8">Edit Work</h4>
+                        <a id="button__close-create-edit-Work" class="waves-effect waves-light btn-flat right">
                             <!-- Show a close icon inside the button -->
                             <i class="material-icons">close</i>
                         </a>
@@ -270,15 +271,15 @@
                         <div class="row">
                             <!-- Create a input-field wrapper -->
                             <div class="input-field col l8 s12">
-                                <!-- Create an input element with the id text__create-edit-assignment-name -->
-                                <input id="text__create-edit-assignment-name" type="text" class="validate create-edit-assignment-field create-edit-assignment-required">
+                                <!-- Create an input element with the id text__create-edit-Work-name -->
+                                <input id="text__create-edit-Work-name" type="text" class="validate create-edit-Work-field create-edit-Work-required">
                                 <!-- Create a label for the input-field -->
                                 <label for="text__create-edit-note-name">Name</label>
                             </div>
                             <!-- Create a input-field wrapper -->
                             <div class="input-field col l4 s12">
-                                <!-- Create an input element with the id text__create-edit-assignment-class -->
-                                <input id="text__create-edit-assignment-class" type="text" class="validate create-edit-assignment-field">
+                                <!-- Create an input element with the id text__create-edit-Work-class -->
+                                <input id="text__create-edit-Work-class" type="text" class="validate create-edit-Work-field">
                                 <!-- Create a label for the input-field -->
                                 <label for="text__create-edit-note-name">Class</label>
                             </div>
@@ -288,41 +289,41 @@
                     <div class="section">
                         <h5>Due(Optional)</h5>
                         <div class="row">
-                            <a id="button__open-assignment-due-date-picker" class="waves-effect waves-light btn tooltip col s12" data-position="bottom" data-tooltip="Open a date picker to set a due date">Set Due Date</a>
+                            <a id="button__open-Work-due-date-picker" class="waves-effect waves-light btn tooltip col s12" data-position="bottom" data-tooltip="Open a date picker to set a due date">Set Due Date</a>
                         </div>
                         <div class="row">
                             <div class="input-field col l5 s12">
-                                <input id="number__assignment-hour-due" class="validate create-edit-assignment-field" type="number" min="0" max="12">
-                                <label for="number__assignment-due">Hour</label>
+                                <input id="number__Work-hour-due" class="validate create-edit-Work-field" type="number" min="0" max="12">
+                                <label for="number__Work-due">Hour</label>
                             </div>
                             <div class="input-field col l5 s12">
-                                <input id="number__assignment-minute-due" class="validate create-edit-assignment-field" type="number" min="0" max="59">
-                                <label for="number__assignment-due">Minute</label>
+                                <input id="number__Work-minute-due" class="validate create-edit-Work-field" type="number" min="0" max="59">
+                                <label for="number__Work-due">Minute</label>
                             </div>
                             <div class="input-field col l2 s12">
-                                <select id="select__assignment-am-pm" class="create-edit-assignment-field">
+                                <select id="select__Work-am-pm" class="create-edit-Work-field">
                                 <option value="" disabled selected></option>
                                 <option value="am">AM</option>
                                 <option value="pm">PM</option>
                             </select>
-                                <label for="select__assignment-am-pm">AM / PM</label>
+                                <label for="select__Work-am-pm">AM / PM</label>
                             </div>
                         </div>
                     </div>
                     <div class="divider"></div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="text__create-edit-assignment-details" class="validate create-edit-assignment-field" type="text" data-length="150">
+                            <input id="text__create-edit-Work-details" class="validate create-edit-Work-field" type="text" data-length="150">
                             <label for="input_text">Details</label>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a id="button__finish-create-edit-assignment" href="#" class="modal-action waves-effect btn-flat">Ok</a>
+                    <a id="button__finish-create-edit-Work" href="#" class="modal-action waves-effect btn-flat">Ok</a>
                 </div>
             </div>
-            <input id="date__create-edit-assignment-due-date" type="date" class="datepicker" hidden>
-            <a id="button__create-assignment" class="btn-floating btn-large waves-effect waves-green blue right" data-target="modal__create-edit-assignment">
+            <input id="date__create-edit-Work-due-date" type="date" class="datepicker" hidden>
+            <a id="button__create-Work" class="btn-floating btn-large waves-effect waves-green blue right" data-target="modal__create-edit-Work">
                 <!-- Show a plus icon in the button -->
                 <i class="material-icons">add</i>
             </a>
