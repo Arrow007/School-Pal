@@ -9,9 +9,9 @@
     <!-- Load the default stylesheet for the app -->
     <link type="text/css" rel="stylesheet" href="../css/default.css" />
     <!-- Load Google Icon Font -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Load the materializecss stylesheet to be utilized -->
-    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" media="screen,projection" href="../css/materialize.min.css" />
 
     <!-- Set the title of the website -->
     <title>School Pal</title>
@@ -27,7 +27,7 @@
         <!-- Create the navbar with a div classed nav-wrapper so materializecss knows its the navbar -->
         <div class="nav-wrapper">
             <!-- Create a button to open the side navigtor -->
-            <a href="#" data-activates="navigator__side" class="button-collapse hide-on-large-only auth">
+            <a class="button-collapse hide-on-large-only auth" data-activates="navigator__side" href="#">
                 <!-- Show a menu icon in the button -->
                 <i class="material-icons">menu</i>
             </a>
@@ -38,7 +38,7 @@
                 <!-- Create a new list item / navigation option for larger screens -->
                 <li>
                     <!-- Create a link to the home page with the tooltip Home -->
-                    <a href="/" class="tooltip" data-position="bottom" data-tooltip="Home">
+                    <a class="tooltip" data-position="bottom" data-tooltip="Home" href="..">
                         <!-- Show a home icon for the link -->
                         <i class="material-icons">home</i>
                     </a>
@@ -46,7 +46,7 @@
                 <!-- Create a new list item / navigation option for larger screens -->
                 <li>
                     <!-- Create a link to the assignments page with the tooltip Assignments -->
-                    <a href="../assignments/index.html" class="tooltip" data-position="bottom" data-tooltip="Assignments">
+                    <a class="tooltip" data-position="bottom" data-tooltip="Work" href="../work/index.html">
                         <!-- Show an assignments icon for the link -->
                         <i class="material-icons">assignment</i>
                     </a>
@@ -54,7 +54,7 @@
                 <!-- Create a new list item / navigation option for larger screens -->
                 <li>
                     <!-- Create a link to the classes page with the tooltip CLasses -->
-                    <a href="../classes/index.html" class="tooltip" data-position="bottom" data-tooltip="Classes">
+                    <a class="tooltip" data-position="bottom" data-tooltip="Classes" href="../classes/index.html">
                         <!-- Show a class icon for the link -->
                         <i class="material-icons">class</i>
                     </a>
@@ -62,7 +62,7 @@
                 <!-- Create a new list item / navigation option for larger screens -->
                 <li>
                     <!-- Create a link to the discussion page with the tooltip Discussion -->
-                    <a href="../discussion/index.html" class="tooltip" data-position="bottom" data-tooltip="Discussion">
+                    <a class="tooltip" data-position="bottom" data-tooltip="Discussion" href="../discussion/index.html">
                         <!-- Show a message icon for the link -->
                         <i class="material-icons">message</i>
                     </a>
@@ -70,7 +70,7 @@
                 <!-- Create a new list item / navigation option for larger screens -->
                 <li>
                     <!-- Create a link to the notes page with the tooltip Notes -->
-                    <a href="#" class="tooltip" data-position="bottom" data-tooltip="Notes">
+                    <a class="tooltip" data-position="bottom" data-tooltip="Notes" href="#">
                         <!-- Show a notes icon for the link -->
                         <i class="material-icons">note</i>
                     </a>
@@ -78,13 +78,13 @@
                 <!-- Create a new list item / navigation option for larger screens -->
                 <li>
                     <!-- Create a button for the user menu button -->
-                    <a href="#" class="dropdown-button tooltip" data-beloworigin="true" data-constrainwidth="false" data-position="bottom" data-tooltip="More" data-activates="menu__user">
+                    <a class="dropdown-button tooltip" data-beloworigin="true" data-constrainwidth="false" data-position="bottom" data-tooltip="More" data-activates="menu__user" href="#">
                         <!-- Show a more icon in the button -->
                         <i class="material-icons">more_vert</i>
                     </a>
                 </li>
                 <!-- Create a list containg the user menu options -->
-                <ul id="menu__user" class="dropdown-content">
+                <ul class="dropdown-content" id="menu__user">
                     <!-- Create a menu option for the users name -->
                     <li>
                         <!-- Create a span with the text Placeholder Name to be replace with the users name and truncate if too long -->
@@ -95,7 +95,7 @@
                     <!-- Create a menu option to logout -->
                     <li>
                         <!-- Create the button inside the menu option -->
-                        <a id="button__logout" href="#" class="waves-effect waves-red">Logout</a>
+                        <a class="waves-effect waves-red" id="button__logout" href="#">Logout</a>
                     </li>
                 </ul>
             </ul>
@@ -104,11 +104,11 @@
                 <!-- Create a new list item / navigation option -->
                 <li>
                     <!-- Create a link to the login page -->
-                    <a href="../login/index.html" class="waves-effect waves-yellow btn" data-activates="dropdown__authenticate">Login</a>
+                    <a class="waves-effect waves-yellow btn" data-activates="dropdown__authenticate" href="../login/index.html">Login</a>
                 </li>
             </ul>
             <!-- Create a slide-out sidebar navigation list with the id navigator__side -->
-            <ul id="navigator__side" class="side-nav">
+            <ul class="side-nav" id="navigator__side">
                 <!-- Create a list / navigation item -->
                 <li>
                     <!-- Create a container for the users info -->
@@ -160,7 +160,7 @@
                     </a>
                 </li>
                 <!-- Create a logout button to be put at the bottom of the menu with the id button__logout_sidenav -->
-                <a id="button__logout_sidenav" href="#" class="btn waves-effect waves-red">Logout</a>
+                <a class="btn waves-effect waves-red" id="button__logout_sidenav" href="#">Logout</a>
             </ul>
         </div>
     </nav>
@@ -199,7 +199,7 @@
                     <!-- Create an input-field wrapper that always full width -->
                     <div class="input-field col l12">
                         <!-- Create a text area to collect feedback on the users reason for use -->
-                        <textarea id="textarea__reason-for-use" class="materialize-textarea"></textarea>
+                        <textarea class="materialize-textarea" id="textarea__reason-for-use"></textarea>
                         <!-- Cretae a label for the input-field -->
                         <label for="textarea__reason-for-use">Reason for Use(Optional)</label>
                     </div>
@@ -209,16 +209,16 @@
                     <!-- Creare a new row to organize the UI -->
                     <div class="row">
                         <!-- Create a button to submit the account setup data with the id button_submit-account-setup -->
-                        <a id="button_submit-account-setup" class="waves-effect waves-light btn-large">Ok</a>
+                        <a class="waves-effect waves-light btn-large" id="button_submit-account-setup">Ok</a>
                     </div>
                 </div>
             </div>
             <!-- Create a new row to organize the UI with the id notes-wrapper -->
-            <div id="notes-wrapper" class="row">
+            <div class="row" id="notes-wrapper">
                 <!-- Create a template element for a note and tell the Vue libaray to create a new note for each note passed to it -->
-                <div v-for="note in notes" class="col s12 m4 l4">
+                <div class="col s12 m4 l4" v-for="note in notes">
                     <!-- Create a div to contain the notes contain and dynamicaly assign the note its id -->
-                    <div :id="note.id" class="card blue-grey darken-1">
+                    <div class="card blue-grey darken-1" :id="note.id">
                         <!-- Create a div to wrap the cards primary content -->
                         <div class="card-content white-text">
                             <!-- Create a span to contain the cards title and dynamicaly give the note its title also truncate if too long -->
@@ -229,17 +229,17 @@
                         <!-- Create an area contain actions for the note -->
                         <div class="card-action">
                             <!-- Create a button to view the note then call the method viewNote and pass it the note id -->
-                            <a href="#" v-on:click="viewNote(note.id)">View</a>
+                            <a v-on:click="viewNote(note.id)" href="#">View</a>
                             <!-- Create a button to edit the note then call the method viewNote and pass it the note id -->
-                            <a href="#" v-on:click="editNote(note.id,note.details.name,note.details.message)">Edit</a>
+                            <a v-on:click="editNote(note.id,note.details.name,note.details.message)" href="#">Edit</a>
                             <!-- Create a button to delete the note then call the method deleteNote and pass it the note id -->
-                            <a href="#" v-on:click="deleteNote(note.id)" class="text-red">Delete</a>
+                            <a v-on:click="deleteNote(note.id)" href="#">Delete</a>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Create a modal for viewing the note -->
-            <div id="modal_view-note" class="modal modal-fixed-footer">
+            <div class="modal modal-fixed-footer" id="modal_view-note">
                 <!-- Create a div for containg the modal primary content -->
                 <div class="modal-content">
                     <!-- Create a new row to organize the UI -->
@@ -247,7 +247,7 @@
                         <!-- Create a title for the note 8 columns wide -->
                         <h4 class="col s8"></h4>
                         <!-- Create a button to close the dialog with the id button__close-view-note -->
-                        <a id="button__close-view-note" class="waves-effect waves-light btn-flat modal-close right">
+                        <a class="waves-effect waves-light btn-flat modal-close right" id="button__close-view-note">
                             <!-- Show a close icon in the close button -->
                             <i class="material-icons">close</i>
                         </a>
@@ -261,15 +261,15 @@
                 <!-- Create a div to contain the modals options -->
                 <div class="modal-footer">
                     <!-- Create a button to close the modal -->
-                    <a href="#!" class="modal-action modal-close waves-effect waves-light btn-flat">Close</a>
+                    <a class="modal-action modal-close waves-effect waves-light btn-flat" href="#">Close</a>
                     <!-- Create a button to edit the note with the id button_edit-note-viewing -->
-                    <a id="button_edit-note-viewing" href="#!" class="modal-action waves-effect waves-green btn-flat">Edit</a>
+                    <a class="modal-action waves-effect waves-green btn-flat" id="button_edit-note-viewing" href="#">Edit</a>
                     <!--  Create a button to delete the note with the id button_delete-note-viewing -->
-                    <a id="button_delete-note-viewing" href="#!" class="modal-action waves-effect waves-red btn-flat red-text">Delete</a>
+                    <a class="modal-action waves-effect waves-red btn-flat red-text" id="button_delete-note-viewing" href="#">Delete</a>
                 </div>
             </div>
             <!-- Create a modal with the id modal_create-edit-note -->
-            <div id="modal_create-edit-note" class="modal modal-fixed-footer">
+            <div class="modal modal-fixed-footer" id="modal_create-edit-note">
                 <!-- Create a div to contain the modals primary content -->
                 <div class="modal-content">
                     <!-- Create a new row to organize the UI -->
@@ -277,7 +277,7 @@
                         <!-- Create a header with the text Edit Note and a width of 8 columns -->
                         <h4 class="col s8">Edit Note</h4>
                         <!-- Create a button to close the dialog with the id button__close-create-create-edit-note -->
-                        <a id="button__close-create-create-edit-note" class="waves-effect waves-light btn-flat right">
+                        <a class="waves-effect waves-light btn-flat right" id="button__close-create-create-edit-note">
                             <!-- Show a close icont inside the button -->
                             <i class="material-icons">close</i>
                         </a>
@@ -287,7 +287,7 @@
                         <!-- Create a input-field wrapper 12 columns wide -->
                         <div class="input-field col s12">
                             <!-- Create an input element with the id text__create-edit-note-name -->
-                            <input id="text__create-edit-note-name" type="text" class="validate create-edit-note-required">
+                            <input class="validate create-edit-note-required" id="text__create-edit-note-name" type="text">
                             <!-- Create a label for the input-field -->
                             <label for="text__create-edit-note-name">Name</label>
                         </div>
@@ -297,7 +297,7 @@
                         <!-- Create a input-field wrapper 12 columns wide -->
                         <div class="input-field col s12">
                             <!-- Create a textarea element with the id textarea__create-edit-note-text -->
-                            <textarea id="textarea__create-edit-note-text" class="materialize-textarea validate create-edit-note-required"></textarea>
+                            <textarea class="materialize-textarea validate create-edit-note-required" id="textarea__create-edit-note-text"></textarea>
                             <!-- Create a label for the input-field -->
                             <label for="textarea__create-edit-note-text">Message</label>
                         </div>
@@ -306,13 +306,13 @@
                 <!-- Create a options section at the bottom of the modal -->
                 <div class="modal-footer">
                     <!-- Create an ok button with the id button__finish-create-edit-note to finish editing the note -->
-                    <a id="button__finish-create-edit-note" href="#!" class="modal-action waves-effect waves-green btn-flat">Ok</a>
+                    <a class="modal-action waves-effect waves-green btn-flat" id="button__finish-create-edit-note" href="#">Ok</a>
                 </div>
             </div>
             <!-- Create a floating action button that opens the create / edit modal -->
-            <a id="button__create-note" class="btn-floating btn-large waves-effect waves-green blue right" data-target="modal_create-edit-note">
+            <a class="btn-floating btn-large waves-effect waves-green blue right" id="button__create-note" data-target="modal_create-edit-note">
                 <!-- Show a plus icon in the button -->
-                <i class="material-icons">add</i>
+                <i class="material-icons">create</i>
             </a>
         </div>
     </main>

@@ -3,9 +3,12 @@
 
 <head>
     <!-- Declare stylesheets for icons, fonts, and styling -->
+    <!-- Load the default stylesheet for the app -->
     <link type="text/css" rel="stylesheet" href="../css/default.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+    <!-- Load Google Icon Font -->
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Load the materializecss stylesheet to be utilized -->
+    <link type="text/css" rel="stylesheet" media="screen,projection" href="../css/materialize.min.css" />
 
     <!-- Set the title of the website -->
     <title>School Pal</title>
@@ -16,16 +19,17 @@
 <body>
     <nav>
         <div class="nav-wrapper">
-            <a href="#" data-activates="navigator__side" class="button-collapse hide-on-large-only auth"><i class="material-icons">menu</i></a>
-            <a href="#" class="brand-logo center">Discussion</a>
+            <a class="button-collapse hide-on-large-only auth" data-activates="navigator__side" href="#">
+                <i class="material-icons">menu</i></a>
+            <a class="brand-logo center" href="#">Discussion</a>
             <ul class="right hide-on-med-and-down auth">
                 <li>
-                    <a class="tooltip" data-position="bottom" data-tooltip="Home" href="/">
+                    <a class="tooltip" data-position="bottom" data-tooltip="Home" href="..">
                         <i class="material-icons">home</i>
                     </a>
                 </li>
                 <li>
-                    <a class="tooltip" data-position="bottom" data-tooltip="Assignments" href="../assignments/index.html">
+                    <a class="tooltip" data-position="bottom" data-tooltip="Work" href="../work/index.html">
                         <i class="material-icons">assignment</i>
                     </a>
                 </li>
@@ -49,20 +53,20 @@
                         <i class="material-icons">more_vert</i>
                     </a>
                 </li>
-                <ul id="menu__user" class="dropdown-content">
+                <ul class="dropdown-content" id="menu__user">
                     <li>
                         <span class="area__menu-name truncate">Placeholder Name</span>
                     </li>
                     <li class="divider"></li>
                     <li>
-                        <a id="button__logout" href="#" class="waves-effect waves-red">Logout</a>
+                        <a class="waves-effect waves-red" id="button__logout" href="#">Logout</a>
                     </li>
                 </ul>
 
             </ul>
             <ul class="right no-auth">
                 <li>
-                    <a class="waves-effect waves-yellow btn" href="../login/index.html" data-activates="dropdown__authenticate">Login</a>
+                    <a class="waves-effect waves-yellow btn" data-activates="dropdown__authenticate" href="../login/index.html">Login</a>
                 </li>
             </ul>
             <ul class="side-nav" id="navigator__side">
@@ -97,7 +101,7 @@
                         <i class="material-icons">note</i>Notes
                     </a>
                 </li>
-                <a id="button__logout_sidenav" href="#" class="btn waves-effect waves-red">Logout</a>
+                <a class="btn waves-effect waves-red" id="button__logout_sidenav" href="#">Logout</a>
             </ul>
         </div>
     </nav>
@@ -119,7 +123,7 @@
             </div>
             <div class="row">
                 <div class="input-field col l12">
-                    <textarea id="textarea__reason-for-use" class="materialize-textarea"></textarea>
+                    <textarea class="materialize-textarea" id="textarea__reason-for-use"></textarea>
                     <label for="textarea__reason-for-use">Reason for Use(Optional)</label>
                 </div>
             </div>
@@ -132,10 +136,10 @@
     </main>
     <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
     <!-- Load jQuery for use in other scripts -->
-    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="../js/materialize.min.js"></script>
+    <script src="../js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="../js/materialize.min.js" type="text/javascript"></script>
     <!-- Load the primary javascript file -->
-    <script type="text/javascript" src="../js/main.js"></script>
+    <script src="../js/main.js" type="text/javascript"></script>
 </body>
 
 </html>

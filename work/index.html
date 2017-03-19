@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!-- Create the html document root tag -->
 <html class="page__home">
@@ -10,7 +9,7 @@
     <!-- Load the default stylesheet for the app -->
     <link type="text/css" rel="stylesheet" href="../css/default.css" />
     <!-- Load Google Icon Font -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Load the materializecss stylesheet to be utilized -->
     <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
 
@@ -28,34 +27,34 @@
         <!-- Create the navbar with a div classed nav-wrapper so materializecss knows its the navbar -->
         <div class="nav-wrapper">
             <!-- Create a button to open the side navigtor -->
-            <a href="#" data-activates="navigator__side" class="button-collapse hide-on-large-only auth">
+            <a class="button-collapse hide-on-large-only auth" data-activates="navigator__side" href="#">
                 <!-- Show a menu icon in the button -->
                 <i class="material-icons">menu</i>
             </a>
             <!-- Create title with page name and center it in the navbar -->
-            <a class="brand-logo center">work</a>
+            <a class="brand-logo center">Work</a>
             <!-- Create a list containing navigation on the right side if the screen only to be shown when logged in -->
             <ul class="right hide-on-med-and-down auth">
                 <!-- Create a new list item / navigation option for larger screens -->
                 <li>
                     <!-- Create a link to the home page with the tooltip Home -->
-                    <a href="/" class="tooltip" data-position="bottom" data-tooltip="Home">
+                    <a class="tooltip" data-position="bottom" data-tooltip="Home" href="/">
                         <!-- Show a home icon for the link -->
                         <i class="material-icons">home</i>
                     </a>
                 </li>
                 <!-- Create a new list item / navigation option for larger screens -->
                 <li>
-                    <!-- Create a link to the work page with the tooltip work -->
-                    <a class="tooltip" data-position="bottom" data-tooltip="work">
-                        <!-- Show an work icon for the link -->
-                        <i class="material-icons">Work</i>
+                    <!-- Create a link to the work page with the tooltip Work -->
+                    <a class="tooltip" data-position="bottom" data-tooltip="Work" href="#">
+                        <!-- Show an works icon for the link -->
+                        <i class="material-icons">assignment</i>
                     </a>
                 </li>
                 <!-- Create a new list item / navigation option for larger screens -->
                 <li>
                     <!-- Create a link to the classes page with the tooltip CLasses -->
-                    <a href="../classes/index.html" class="tooltip" data-position="bottom" data-tooltip="Classes">
+                    <a class="tooltip" data-position="bottom" data-tooltip="Classes" href="../classes/index.html">
                         <!-- Show a class icon for the link -->
                         <i class="material-icons">class</i>
                     </a>
@@ -63,7 +62,7 @@
                 <!-- Create a new list item / navigation option for larger screens -->
                 <li>
                     <!-- Create a link to the discussion page with the tooltip Discussion -->
-                    <a href="../discussion/index.html" class="tooltip" data-position="bottom" data-tooltip="Discussion">
+                    <a class="tooltip" data-position="bottom" data-tooltip="Discussion" href="../discussion/index.html">
                         <!-- Show a message icon for the link -->
                         <i class="material-icons">message</i>
                     </a>
@@ -71,7 +70,7 @@
                 <!-- Create a new list item / navigation option for larger screens -->
                 <li>
                     <!-- Create a link to the notes page with the tooltip Notes -->
-                    <a href="../notes/index.html" class="tooltip" data-position="bottom" data-tooltip="Notes">
+                    <a class="tooltip" data-position="bottom" data-tooltip="Notes" href="../notes/index.html">
                         <!-- Show a notes icon for the link -->
                         <i class="material-icons">note</i>
                     </a>
@@ -79,13 +78,13 @@
                 <!-- Create a new list item / navigation option for larger screens -->
                 <li>
                     <!-- Create a button for the user menu button -->
-                    <a href="#" class="dropdown-button tooltip" data-beloworigin="true" data-constrainwidth="false" data-position="bottom" data-tooltip="More" data-activates="menu__user">
+                    <a class="dropdown-button tooltip" data-beloworigin="true" data-constrainwidth="false" data-position="bottom" data-tooltip="More" data-activates="menu__user" href="#">
                         <!-- Show a more icon in the button -->
                         <i class="material-icons">more_vert</i>
                     </a>
                 </li>
                 <!-- Create a list containg the user menu options -->
-                <ul id="menu__user" class="dropdown-content">
+                <ul class="dropdown-content" id="menu__user">
                     <!-- Create a menu option for the users name -->
                     <li>
                         <!-- Create a span with the text Placeholder Name to be replace with the users name and truncate if too long -->
@@ -96,7 +95,7 @@
                     <!-- Create a menu option to logout -->
                     <li>
                         <!-- Create the button inside the menu option -->
-                        <a id="button__logout" href="#" class="waves-effect waves-red">Logout</a>
+                        <a class="waves-effect waves-red" id="button__logout" href="#">Logout</a>
                     </li>
                 </ul>
             </ul>
@@ -105,11 +104,11 @@
                 <!-- Create a new list item / navigation option -->
                 <li>
                     <!-- Create a link to the login page -->
-                    <a href="../login/index.html" class="waves-effect waves-yellow btn" data-activates="dropdown__authenticate">Login</a>
+                    <a class="waves-effect waves-yellow btn" data-activates="dropdown__authenticate" href="../login/index.html">Login</a>
                 </li>
             </ul>
             <!-- Create a slide-out sidebar navigation list with the id navigator__side -->
-            <ul id="navigator__side" class="side-nav">
+            <ul class="side-nav" id="navigator__side">
                 <!-- Create a list / navigation item -->
                 <li>
                     <!-- Create a container for the users info -->
@@ -132,8 +131,8 @@
                 <li>
                     <!-- Create a link to the work page -->
                     <a href="#">
-                        <!-- Show a Work icon next to the text work -->
-                        <i class="material-icons">Work</i>work
+                        <!-- Show a work icon next to the text Work -->
+                        <i class="material-icons">assignment</i>Work
                     </a>
                 </li>
                 <!-- Create a list / navigation item -->
@@ -161,7 +160,7 @@
                     </a>
                 </li>
                 <!-- Create a logout button to be put at the bottom of the menu with the id button__logout -->
-                <a id="button__logout_sidenav" class="waves-effect waves-red btn button__side-menu-logout">Logout</a>
+                <a class="waves-effect waves-red btn button__side-menu-logout" id="button__logout_sidenav">Logout</a>
             </ul>
         </div>
     </nav>
@@ -169,11 +168,9 @@
     <main>
         <!-- Create a div to show when there is a user logged in -->
         <div class="auth">
-            
-  <div class="progress">
-      <div class="indeterminate"></div>
-  </div>
-        
+            <div class="progress">
+                <div class="indeterminate"></div>
+            </div>
             <!-- Create a div to contain the account setup overlay -->
             <div class="section__account-setup purple lighten-5">
                 <!-- Create a header to contain the overlay name -->
@@ -205,7 +202,7 @@
                     <!-- Create an input-field wrapper that always full width -->
                     <div class="input-field col l12">
                         <!-- Create a text area to collect feedback on the users reason for use -->
-                        <textarea id="textarea__reason-for-use" class="materialize-textarea"></textarea>
+                        <textarea class="materialize-textarea" id="textarea__reason-for-use"></textarea>
                         <!-- Cretae a label for the input-field -->
                         <label for="textarea__reason-for-use">Reason for Use(Optional)</label>
                     </div>
@@ -215,54 +212,60 @@
                     <!-- Creare a new row to organize the UI -->
                     <div class="row">
                         <!-- Create a button to submit the account setup data with the id button_submit-account-setup -->
-                        <a id="button_submit-account-setup" class="waves-effect waves-light btn-large">Ok</a>
+                        <a class="waves-effect waves-light btn-large" id="button_submit-account-setup">Ok</a>
                     </div>
                 </div>
             </div>
-            <ul id="work-wrapper" class="collection">
-                <li v-for="Work in Work" :id="Work.id" :key="Work.id" class="collection-item avatar">
-                    <i class="material-icons circle">Work</i>
-                    <span class="title col ">{{ Work.details.name }} - <i>{{ Work.details.class }}</i></span>
-                    <a href="#" class="right waves-effect waves-gray red-text" v-on:click="deleteWork(Work.id)"><i class="material-icons">delete</i></a>
-                    <a href="#" class="right waves-effect waves-green" v-on:click="editWork(Work.id, Work.details)"><i class="material-icons">edit</i></a>
-                    <a href="#" class="right waves-effect waves-green black-text" v-on:click="viewWork(Work.id,Work.details)"><i class="material-icons">fullscreen</i></a>
+            <ul class="collection" id="work-wrapper">
+                <li class="collection-item avatar" :id="work.id" v-for="work in work" :key="work.id">
+                    <i class="material-icons circle">assignment</i>
+                    <span class="title col">{{ work.details.name }} - <i>{{ work.details.class }}</i></span>
+                    <a class="right waves-effect waves-gray red-text" v-on:click="deleteWork(work.id)" href="#">
+                        <i class="material-icons">delete</i>
+                    </a>
+                    <a class="right waves-effect waves-green" v-on:click="editWork(work.id, work.details)" href="#">
+                        <i class="material-icons">edit</i>
+                    </a>
+                    <a class="right waves-effect waves-green black-text" v-on:click="viewWork(work.id,work.details)" href="#">
+                        <i class="material-icons">fullscreen</i>
+                    </a>
                     <p>
                         <b>Details</b>
-                        <span class="truncate">{{ Work.details.details }}</span>
+                        <span class="truncate">{{ work.details.details }}</span>
                         <b>Due</b>
                         <br>
-                        <span>{{ Work.details.due }}</span>
+                        <span>{{ work.details.due }}</span>
                     </p>
                 </li>
             </ul>
-            <div id="modal__view-Work" class="modal modal-fixed-footer">
+            <div class="modal modal-fixed-footer" id="modal__view-work">
                 <div class="modal-content">
                     <div class="row">
-                        <h4 id="view-Work_title" class="col s10"></h4>
+                        <h4 class="col s10" id="view-work_title"></h4>
                         <a class="waves-effect waves-light btn-flat right modal-close">
                             <!-- Show a close icon in the close button -->
                             <i class="material-icons">close</i>
                         </a>
                         <br>
-                        <h4 id="view-Work_class" class="col s10"></h4>
+                        <h4 class="col s10" id="view-work_class"></h4>
                     </div>
                     <div class="section">
                         <h5>Details</h5>
-                        <p id="view-Work_details"></p>
+                        <p id="view-work_details"></p>
                     </div>
                     <div class="divider"></div>
                     <h5>Due</h5>
-                    <span id="view-Work_due"></span>
+                    <span id="view-work_due"></span>
                 </div>
                 <div class="modal-footer">
-                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
+                    <a class="modal-action modal-close waves-effect waves-green btn-flat" href="#!">Ok</a>
                 </div>
             </div>
-            <div id="modal__create-edit-Work" class="modal modal-fixed-footer">
+            <div class="modal modal-fixed-footer" id="modal__create-edit-work">
                 <div class="modal-content">
                     <div class="row">
                         <h4 class="col s8">Edit Work</h4>
-                        <a id="button__close-create-edit-Work" class="waves-effect waves-light btn-flat right">
+                        <a class="waves-effect waves-light btn-flat right" id="button__close-create-edit-work">
                             <!-- Show a close icon inside the button -->
                             <i class="material-icons">close</i>
                         </a>
@@ -271,15 +274,15 @@
                         <div class="row">
                             <!-- Create a input-field wrapper -->
                             <div class="input-field col l8 s12">
-                                <!-- Create an input element with the id text__create-edit-Work-name -->
-                                <input id="text__create-edit-Work-name" type="text" class="validate create-edit-Work-field create-edit-Work-required">
+                                <!-- Create an input element with the id text__create-edit-work-name -->
+                                <input class="validate create-edit-work-field create-edit-work-required" id="text__create-edit-work-name" type="text">
                                 <!-- Create a label for the input-field -->
                                 <label for="text__create-edit-note-name">Name</label>
                             </div>
                             <!-- Create a input-field wrapper -->
                             <div class="input-field col l4 s12">
-                                <!-- Create an input element with the id text__create-edit-Work-class -->
-                                <input id="text__create-edit-Work-class" type="text" class="validate create-edit-Work-field">
+                                <!-- Create an input element with the id text__create-edit-work-class -->
+                                <input class="validate create-edit-work-field" id="text__create-edit-work-class" type="text">
                                 <!-- Create a label for the input-field -->
                                 <label for="text__create-edit-note-name">Class</label>
                             </div>
@@ -289,43 +292,43 @@
                     <div class="section">
                         <h5>Due(Optional)</h5>
                         <div class="row">
-                            <a id="button__open-Work-due-date-picker" class="waves-effect waves-light btn tooltip col s12" data-position="bottom" data-tooltip="Open a date picker to set a due date">Set Due Date</a>
+                            <a class="waves-effect waves-light btn tooltip col s12" id="button__open-work-due-date-picker" data-position="bottom" data-tooltip="Open a date picker to set a due date">Set Due Date</a>
                         </div>
                         <div class="row">
                             <div class="input-field col l5 s12">
-                                <input id="number__Work-hour-due" class="validate create-edit-Work-field" type="number" min="0" max="12">
-                                <label for="number__Work-due">Hour</label>
+                                <input class="validate create-edit-work-field" id="number__work-hour-due" type="number" min="0" max="12">
+                                <label for="number__work-due">Hour</label>
                             </div>
                             <div class="input-field col l5 s12">
-                                <input id="number__Work-minute-due" class="validate create-edit-Work-field" type="number" min="0" max="59">
-                                <label for="number__Work-due">Minute</label>
+                                <input class="validate create-edit-work-field" id="number__work-minute-due" type="number" min="0" max="59">
+                                <label for="number__work-due">Minute</label>
                             </div>
                             <div class="input-field col l2 s12">
-                                <select id="select__Work-am-pm" class="create-edit-Work-field">
+                                <select class="create-edit-work-field" id="select__work-am-pm">
                                 <option value="" disabled selected></option>
                                 <option value="am">AM</option>
                                 <option value="pm">PM</option>
                             </select>
-                                <label for="select__Work-am-pm">AM / PM</label>
+                                <label for="select__work-am-pm">AM / PM</label>
                             </div>
                         </div>
                     </div>
                     <div class="divider"></div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="text__create-edit-Work-details" class="validate create-edit-Work-field" type="text" data-length="150">
+                            <input class="validate create-edit-work-field" id="text__create-edit-work-details" type="text" data-length="150">
                             <label for="input_text">Details</label>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a id="button__finish-create-edit-Work" href="#" class="modal-action waves-effect btn-flat">Ok</a>
+                    <a class="modal-action waves-effect btn-flat" id="button__finish-create-edit-work" href="#">Ok</a>
                 </div>
             </div>
-            <input id="date__create-edit-Work-due-date" type="date" class="datepicker" hidden>
-            <a id="button__create-Work" class="btn-floating btn-large waves-effect waves-green blue right" data-target="modal__create-edit-Work">
+            <input class="datepicker" id="date__create-edit-work-due-date" type="date" hidden>
+            <a class="btn-floating btn-large waves-effect waves-green blue" id="button__create-work" data-target="modal__create-edit-work">
                 <!-- Show a plus icon in the button -->
-                <i class="material-icons">add</i>
+                <i class="material-icons">create</i>
             </a>
         </div>
     </main>

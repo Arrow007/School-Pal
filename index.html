@@ -16,8 +16,10 @@
 <body>
     <nav>
         <div class="nav-wrapper">
-            <a href="#" data-activates="navigator__side" class="button-collapse hide-on-large-only auth"><i class="material-icons">menu</i></a>
-            <a href="#" class="brand-logo center">Welcome</a>
+            <a class="button-collapse hide-on-large-only auth" data-activates="navigator__side" href="#">
+                <i class="material-icons">menu</i>
+            </a>
+            <a class="brand-logo center" href="#">Welcome</a>
             <ul class="right hide-on-med-and-down auth">
                 <li>
                     <a class="tooltip" data-position="bottom" data-tooltip="Home" href="#">
@@ -25,7 +27,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="tooltip" data-position="bottom" data-tooltip="Assignments" href="assignments/index.html">
+                    <a class="tooltip" data-position="bottom" data-tooltip="Assignments" href="work/index.html">
                         <i class="material-icons">assignment</i>
                     </a>
                 </li>
@@ -49,13 +51,13 @@
                         <i class="material-icons">more_vert</i>
                     </a>
                 </li>
-                <ul id="menu__user" class="dropdown-content">
+                <ul class="dropdown-content" id="menu__user">
                     <li>
                         <span class="area__menu-name truncate">Placeholder Name</span>
                     </li>
                     <li class="divider"></li>
                     <li>
-                        <a href="#" class="waves-effect waves-red" id="button__logout">Logout</a>
+                        <a class="waves-effect waves-red" id="button__logout" href="#">Logout</a>
                     </li>
                 </ul>
 
@@ -97,11 +99,28 @@
                         <i class="material-icons">note</i>Notes
                     </a>
                 </li>
-                <a id="button__logout_sidenav" href="#" class="btn waves-effect waves-red">Logout</a>
+                <a class="btn waves-effect waves-red" id="button__logout_sidenav" href="#">Logout</a>
             </ul>
         </div>
     </nav>
     <main>
+        <div class="valign-wrapper">
+            <div class="row">
+                <img src="images/logo.png" alt="Logo" height="300" />
+            </div>
+        </div>
+        <div class="row">
+            <h4 class="center-align">
+                Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+            </h4>
+        </div>
+        <div class="valign-wrapper">
+            <div class="row">
+                <a class="waves-effect waves-light btn-large" href="login/index.html">
+                Use this site please
+            </a>
+            </div>
+        </div>
         <div class="section__account-setup purple lighten-5">
             <h4 class="center-align">Account Setup</h4>
             <p class="center-align">Before you can begin using this app we need to know some things about you.</p>
@@ -119,7 +138,7 @@
             </div>
             <div class="row">
                 <div class="input-field col l12">
-                    <textarea id="textarea__reason-for-use" class="materialize-textarea"></textarea>
+                    <textarea class="materialize-textarea" id="textarea__reason-for-use"></textarea>
                     <label for="textarea__reason-for-use">Reason for Use(Optional)</label>
                 </div>
             </div>

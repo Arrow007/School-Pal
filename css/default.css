@@ -1,3 +1,5 @@
+/* All Pages */
+
 .area__menu-user {
     width: 100%;
 }
@@ -29,9 +31,14 @@
     z-index: 100000;
 }
 
-.page__home {
+body {
     background: url("../images/background.png") no-repeat center center fixed;
     background-size: cover;
+}
+
+html {
+    width: 100%;
+    height: 100%;
 }
 
 .auth {
@@ -42,32 +49,54 @@ span.area__menu-name {
     max-width: 175px;
 }
 
+.progress {
+    margin: 0px !important;
+}
+
+
+/* Home */
+
+.image-icon {
+    width: 195px;
+    margin-left: 10px;
+}
+
+
+/* Work and Notes */
+
 #button__create-note,
-#button__create-assignment {
+#button__create-work {
+    right: 23px;
+    bottom: 23px;
     position: fixed;
-    right: 25px;
-    bottom: 25px;
 }
 
-html {
-    width: 100%;
-    height: 100%;
-}
 
-#assignments-wrapper {
+/* Work */
+
+#work-wrapper {
     margin: 0px;
-}
-
-#overlay__view-assignment {
-    z-index: 1000;
-    width: 100%;
-    height: 100%;
-}
-
-#assignments-wrapper {
     display: none;
 }
 
-.progress {
+
+/* Classes */
+
+.collection {
     margin: 0px !important;
+}
+
+.student,
+.teacher {
+    display: none;
+}
+
+.joinability h6 {
+    margin: 0px;
+}
+
+.student .button__join-class {
+    right: 23px;
+    bottom: 23px;
+    position: fixed;
 }
