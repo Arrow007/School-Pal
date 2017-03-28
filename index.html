@@ -27,7 +27,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="tooltip" data-position="bottom" data-tooltip="Assignments" href="work/index.html">
+                    <a class="tooltip" data-position="bottom" data-tooltip="Work" href="work/index.html">
                         <i class="material-icons">assignment</i>
                     </a>
                 </li>
@@ -47,13 +47,18 @@
                     </a>
                 </li>
                 <li>
-                    <a class="dropdown-button tooltip" data-beloworigin="true" data-constrainwidth="false" data-position="bottom" data-tooltip="More" href="#" data-activates="menu__user">
+                    <a class="dropdown-button tooltip dropdown-button" data-beloworigin="true" data-constrainwidth="false" data-position="bottom" data-tooltip="More" href="#!" data-activates="menu__user">
                         <i class="material-icons">more_vert</i>
                     </a>
                 </li>
                 <ul class="dropdown-content" id="menu__user">
                     <li>
                         <span class="area__menu-name truncate">Placeholder Name</span>
+                    </li>
+                    <!-- Create a menu link to the settings page -->
+                    <li>
+                        <!-- Create the button inside the menu option -->
+                        <a class="waves-effect waves-light" href="../settings/index.html">Settings</a>
                     </li>
                     <li class="divider"></li>
                     <li>
@@ -80,8 +85,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="assignments/index.html">
-                        <i class="material-icons">assignment</i>Assignments
+                    <a href="work/index.html">
+                        <i class="material-icons">assignment</i>Work
                     </a>
                 </li>
                 <li>
@@ -99,6 +104,14 @@
                         <i class="material-icons">note</i>Notes
                     </a>
                 </li>
+                <!-- Create a list / navigation item -->
+                <li>
+                    <!-- Create a link to the settings page -->
+                    <a href="../settings/index.html">
+                        <!-- Show a settings icon next to the text Settings -->
+                        <i class="material-icons">settings</i>Settings
+                    </a>
+                </li>
                 <a class="btn waves-effect waves-red" id="button__logout_sidenav" href="#">Logout</a>
             </ul>
         </div>
@@ -111,40 +124,48 @@
         </div>
         <div class="row">
             <h4 class="center-align">
-                Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                <b>By students, for students</b>
+            </h4>
+            <h4 class="center-align">
+                SchoolPal is made for you and tailored to your needs
+            </h4>
+            <h4 class="center-align">
+                Keep track of your work and stay in the know
             </h4>
         </div>
         <div class="valign-wrapper">
             <div class="row">
                 <a class="waves-effect waves-light btn-large" href="login/index.html">
-                Use this site please
-            </a>
+                Get Started
+                </a>
             </div>
         </div>
-        <div class="section__account-setup purple lighten-5">
-            <h4 class="center-align">Account Setup</h4>
-            <p class="center-align">Before you can begin using this app we need to know some things about you.</p>
-            <div class="valign-wrapper">
-                <div class="row">
-                    <div class="input-field">
-                        <select id="select__account-type">
+        <div class="auth">
+            <div class="section__account-setup purple lighten-5">
+                <h4 class="center-align">Account Setup</h4>
+                <p class="center-align">Before you can begin using this app we need to know some things about you.</p>
+                <div class="valign-wrapper">
+                    <div class="row">
+                        <div class="input-field">
+                            <select id="select__account-type">
                             <option value="" disabled>Choose your option</option>
                             <option value="student" selected>Student</option>
                             <option value="teacher">Teacher</option>
                         </select>
-                        <label>Account Type</label>
+                            <label>Account Type</label>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="input-field col l12">
-                    <textarea class="materialize-textarea" id="textarea__reason-for-use"></textarea>
-                    <label for="textarea__reason-for-use">Reason for Use(Optional)</label>
-                </div>
-            </div>
-            <div class="valign-wrapper">
                 <div class="row">
-                    <a class="waves-effect waves-light btn-large" id="button_submit-account-setup">Ok</a>
+                    <div class="input-field col l12">
+                        <textarea class="materialize-textarea" id="textarea__reason-for-use"></textarea>
+                        <label for="textarea__reason-for-use">Reason for Use(Optional)</label>
+                    </div>
+                </div>
+                <div class="valign-wrapper">
+                    <div class="row">
+                        <a class="waves-effect waves-light btn-large" id="button_submit-account-setup">Ok</a>
+                    </div>
                 </div>
             </div>
         </div>

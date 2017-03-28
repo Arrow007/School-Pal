@@ -590,7 +590,15 @@
                     .set({
                         name: $('#text__create-edit-class-name').val()
                     });
-                $('#button__close-create-edit-class').trigger('click');
+                $('#modal__create-edit-class').modal('close');
+                $('#modal__create-edit-class label').removeClass('active');
+                // Tell the textfields that there is no data to be valid
+                $('.create-edit-class-field').removeClass('valid invalid');
+                $('.create-edit-class-field').val('');
+                $('#switch__joinability').removeAttr('checked');
+                if ($('#modal__create-edit-class').attr('data-id')) {
+                    $('#modal__create-edit-class').removeAttr('data-id');
+                }
             } else {
                 Materialize.toast('Please set a name for the class!', 5000);
             }
@@ -613,8 +621,10 @@
                 $('.auth').show();
                 // Hide elements with the class no-auth
                 $('.no-auth').hide();
+                // Declare a variable to hold the users name or no name if there is none
+                var name = firebase.auth().currentUser.displayName ? firebase.auth().currentUser.displayName : 'No Name';
                 // Update the name areas in the ui with the name in the users base
-                $('.area__menu-name').text(firebase.auth().currentUser.displayName);
+                $('.area__menu-name').text(name);
                 // Update the email area in the ui with the email in the users base
                 $('.area__menu-email').text(firebase.auth().currentUser.email);
                 firebase.database()
@@ -679,6 +689,7 @@
                                     .child(snapshot.key)
                                     .once('value')
                                     .then(function(classSnap) {
+                                        $('#message__no-classes').fadeOut();
                                         ClassHandeler.classes.push({
                                             id: snapshot.key,
                                             details: classSnap.val().data
@@ -738,6 +749,7 @@
                                         .child(snapshot.key)
                                         .once('value')
                                         .then(function(classSnap) {
+                                            $('#message__no-classes').fadeOut();
                                             ClassHandeler.classes.push({
                                                 id: snapshot.key,
                                                 details: classSnap.val().data
