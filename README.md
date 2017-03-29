@@ -5,7 +5,7 @@
 There's many ways to manage your work and waste less time, but the best way is with SchoolPal, the app built by students, for students. Multiple features give you the power to have control over your academics. Take notes, write down assignments, and get help.
 
 ## Reasoning
-This app was created to simplify students lives, while it is not open for public use at this point 
+This app was created to simplify students lives however it is not made for public use(maybe in the future).
 
 ## Credits
 * Materializecss - [Mit License](https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
