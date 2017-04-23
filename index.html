@@ -1,11 +1,17 @@
 <!DOCTYPE html>
+<!-- Create the html document root tag -->
 <html class="page__home">
+
+<!-- Create the documents head -->
 
 <head>
     <!-- Declare stylesheets for icons, fonts, and styling -->
+    <!-- Load the default stylesheet for the app -->
     <link type="text/css" rel="stylesheet" href="css/default.css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <!-- Load Google Icon Font -->
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Load the materializecss stylesheet to be utilized -->
+    <link type="text/css" rel="stylesheet" media="screen,projection" href="css/materialize.min.css" />
 
     <!-- Set the title of the website -->
     <title>School Pal</title>
@@ -13,93 +19,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
+<!-- Create the documents body containing the page's content -->
+
 <body>
+    <!-- Create a nav element to contain the navbar content -->
     <nav>
+        <!-- Create the navbar with a div class nav-wrapper so materializecss knows it's the navbar -->
         <div class="nav-wrapper">
-            <a class="button-collapse hide-on-large-only auth" data-activates="navigator__side" href="#">
-                <i class="material-icons">menu</i>
-            </a>
-            <a class="brand-logo center" href="#">Welcome</a>
+            <!-- Create a button for the side menu -->
+            <a class="button-collapse hide-on-large-only auth" data-activates="navigator__side" href="#"><i class="material-icons">menu</i></a>
+            <!-- Show the text 'Classes' in the center -->
+            <a class="brand-logo center" href="#">School Pal</a>
+            <!-- Create a list container to hold the navigation items on the left -->
             <ul class="right hide-on-med-and-down auth">
+                <!-- Add a navigation item -->
                 <li>
                     <a class="tooltip" data-position="bottom" data-tooltip="Home" href="#">
                         <i class="material-icons">home</i>
                     </a>
                 </li>
+                <!-- Add a navigation item -->
                 <li>
+                    <!-- Add a assignment icon to link to the work page -->
                     <a class="tooltip" data-position="bottom" data-tooltip="Work" href="work/index.html">
                         <i class="material-icons">assignment</i>
                     </a>
                 </li>
+                <!-- Add a navigation item -->
                 <li>
+                    <!-- Add a class icon to link to the classes page -->
                     <a class="tooltip" data-position="bottom" data-tooltip="Classes" href="classes/index.html">
                         <i class="material-icons">class</i>
                     </a>
                 </li>
+                <!-- Add a navigation item -->
                 <li>
+                    <!-- Add a message icon to link to the discussion page -->
                     <a class="tooltip" data-position="bottom" data-tooltip="Discussion" href="discussion/index.html">
                         <i class="material-icons">message</i>
                     </a>
                 </li>
+                <!-- Add a navigation item -->
                 <li>
+                    <!-- Add a note to link to the notes page -->
                     <a class="tooltip" data-position="bottom" data-tooltip="Notes" href="notes/index.html">
                         <i class="material-icons">note</i>
                     </a>
                 </li>
+                <!-- Add a navigation item -->
                 <li>
-                    <a class="dropdown-button tooltip dropdown-button" data-beloworigin="true" data-constrainwidth="false" data-position="bottom" data-tooltip="More" href="#!" data-activates="menu__user">
+                    <!-- Add a menu to open the user menu -->
+                    <a class="dropdown-button tooltip" data-beloworigin="true" data-constrainwidth="false" data-activates="menu__user" data-position="bottom" data-tooltip="More" href="#">
                         <i class="material-icons">more_vert</i>
                     </a>
                 </li>
+                <!-- Create a list to contain the user menu options -->
                 <ul class="dropdown-content" id="menu__user">
+                    <!-- Add a user menu option -->
                     <li>
+                        <!-- Add a area for the user's name to be -->
                         <span class="area__menu-name truncate">Placeholder Name</span>
                     </li>
                     <!-- Create a menu link to the settings page -->
                     <li>
                         <!-- Create the button inside the menu option -->
-                        <a class="waves-effect waves-light" href="../settings/index.html">Settings</a>
+                        <a class="waves-effect waves-light" href="settings/index.html">Settings</a>
                     </li>
+                    <!-- Create a line between the rest of the items -->
                     <li class="divider"></li>
+                    <!-- Add a user menu option -->
                     <li>
+                        <!-- Add a button to allow the user to logout -->
                         <a class="waves-effect waves-red" id="button__logout" href="#">Logout</a>
                     </li>
                 </ul>
-
             </ul>
-            <ul class="right no-auth">
-                <li>
-                    <a class="waves-effect waves-yellow btn" href="login/index.html" data-activates="dropdown__authenticate">Login</a>
-                </li>
-            </ul>
+            <!-- Create a slide-out sidebar navigation list with the id navigator__side -->
             <ul class="side-nav" id="navigator__side">
+                <!-- Create a list / navigation item -->
                 <li>
                     <div class="deep-purple lighten-2 area__menu-user">
                         <h6 class="area__menu-name truncate"><u>Placeholder Name</u></h6>
                         <i class="area__menu-email truncate">email@provider.domain</i>
                     </div>
                 </li>
+                <!-- Create a list / navigation item -->
                 <li>
+                    <!-- Create a link to the home page -->
                     <a href="#">
                         <i class="material-icons">home</i>Home
                     </a>
                 </li>
+                <!-- Create a list / navigation item -->
                 <li>
+                    <!-- Create a link to the work page -->
                     <a href="work/index.html">
                         <i class="material-icons">assignment</i>Work
                     </a>
                 </li>
+                <!-- Create a list / navigation item -->
                 <li>
-                    <a href="classes/index.html">
+                    <!-- Create a link to the classes page -->
+                    <a href="classes/index,html">
                         <i class="material-icons">class</i>Classes
                     </a>
                 </li>
+                <!-- Create a list / navigation item -->
                 <li>
+                    <!-- Create a link to the discussion page -->
                     <a href="discussion/index.html">
                         <i class="material-icons">message</i>Discussion
                     </a>
                 </li>
+                <!-- Create a list / navigation item -->
                 <li>
+                    <!-- Create a link to the notes page -->
                     <a href="notes/index.html">
                         <i class="material-icons">note</i>Notes
                     </a>
@@ -107,74 +141,107 @@
                 <!-- Create a list / navigation item -->
                 <li>
                     <!-- Create a link to the settings page -->
-                    <a href="../settings/index.html">
+                    <a href="settings/index.html">
                         <!-- Show a settings icon next to the text Settings -->
                         <i class="material-icons">settings</i>Settings
                     </a>
                 </li>
+                <!-- Create a logout button to be put at the bottom of the menu with the id button__logout_sidenav -->
                 <a class="btn waves-effect waves-red" id="button__logout_sidenav" href="#">Logout</a>
             </ul>
         </div>
     </nav>
+    <!-- Create the main element to contain the page's primary content -->
     <main>
+        <!-- Create a element to show when the user is not logged in -->
         <div class="no-auth">
-        <div class="valign-wrapper">
-            <div class="row">
-                <img src="images/logo.png" alt="Logo" height="300" />
-            </div>
-        </div>
-        <div class="row">
-            <h4 class="center-align">
-                <b>By students, for students</b>
-            </h4>
-            <h4 class="center-align">
-                SchoolPal is made for you and tailored to your needs
-            </h4>
-            <h4 class="center-align">
-                Keep track of your work and stay in the know
-            </h4>
-        </div>
-        <div class="valign-wrapper">
-            <div class="row">
-                <a class="waves-effect waves-light btn-large" href="login/index.html">
-                Get Started
-                </a>
-            </div>
-        </div>
-        <div class="auth">
-        <div class="section__account-setup purple lighten-5">
-            <h4 class="center-align">Account Setup</h4>
-            <p class="center-align">Before you can begin using this app we need to know some things about you.</p>
+            <!-- Create a new element to vertically align the contents -->
             <div class="valign-wrapper">
+                <!-- Create a new row to organize the UI -->
                 <div class="row">
-                    <div class="input-field">
-                        <select id="select__account-type">
-                            <option value="" disabled>Choose your option</option>
-                            <option value="student" selected>Student</option>
-                            <option value="teacher">Teacher</option>
-                        </select>
+                    <!-- Show the apps logo or the text Logo if it can't be loaded -->
+                    <img src="images/logo.png" alt="Logo" height="300" />
+                </div>
+            </div>
+            <!-- Create a new row the organize the UI -->
+            <div class="row">
+                <!-- Create an element to center align its text -->
+                <h4 class="center-align">
+                    <!-- Make the text bold -->
+                    <b>By students, for students</b>
+                </h4>
+                <!-- Create an element to center align its text -->
+                <h4 class="center-align">
+                    School Pal is made for you and tailored to your needs
+                </h4>
+                <!-- Create an element to center align its text -->
+                <h4 class="center-align">
+                    Keep track of your work and stay in the know
+                </h4>
+            </div>
+            <!-- Create an element to vertically align its content -->
+            <div class="valign-wrapper">
+                <!-- Create a new row to organize the UI -->
+                <div class="row">
+                    <!-- Create a button to link to the login page -->
+                    <a class="waves-effect waves-light btn-large" href="login/index.html">
+                       Get Started
+                   </a>
+                </div>
+            </div>
+        </div>
+        <!-- Create a div to show when there is a user logged in -->
+        <div class="auth">
+            <!-- Create a div to contain the account setup overlay -->
+            <div class="section__account-setup purple lighten-5">
+                <!-- Create a header to contain the overlay name -->
+                <h4 class="center-align">Account Setup</h4>
+                <!-- Create a paragraph element to give context to the overlay -->
+                <p class="center-align">Before you can begin using this app we need to know some things about you.</p>
+                <!-- Create a vertical alignment wrapper to vertically align content -->
+                <div class="valign-wrapper">
+                    <!-- Create a new row to organize the UI -->
+                    <div class="row">
+                        <!-- Create a new input-field wrapper -->
+                        <div class="input-field">
+                            <!-- Create a selection area -->
+                            <select id="select__account-type">
+                               <!-- Add instructions for the selection area -->
+                               <option value="" disabled>Choose your option</option>
+                               <!-- Add an option to the selection area for a student account -->
+                               <option value="student" selected>Student</option>
+                                <!-- Add an option to the selection area for a teacher account -->
+                               <option value="teacher">Teacher</option>
+                           </select>
+                            <!-- Create a label for the input-field -->
                             <label>Account Type</label>
                         </div>
                     </div>
                 </div>
+                <!-- Create a new row to organize the UI -->
                 <div class="row">
+                    <!-- Create an input-field wrapper that always full width -->
                     <div class="input-field col l12">
+                        <!-- Create a text area to collect feedback on the users reason for use -->
                         <textarea class="materialize-textarea" id="textarea__reason-for-use"></textarea>
+                        <!-- Create a label for the input-field -->
                         <label for="textarea__reason-for-use">Reason for Use(Optional)</label>
                     </div>
                 </div>
+                <!-- Create a vertical alignment wrapper to vertically align content -->
                 <div class="valign-wrapper">
+                    <!-- Create a new row to organize the UI -->
                     <div class="row">
+                        <!-- Create a button to submit the account setup data with the id button_submit-account-setup -->
                         <a class="waves-effect waves-light btn-large" id="button_submit-account-setup">Ok</a>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
     </main>
     <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
     <!-- Load jQuery for use in other scripts -->
-    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <!-- Load the primary javascript file -->
     <script type="text/javascript" src="js/main.js"></script>

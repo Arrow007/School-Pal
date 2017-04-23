@@ -33,7 +33,7 @@
 }
 
 body {
-    background: url("../images/background.png") no-repeat center center fixed;
+    background: url("../images/background.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -54,6 +54,14 @@ span.area__menu-name {
     margin: 0px !important;
 }
 
+.icon__250 {
+    font-size: 250px !important;
+}
+
+.nav-wrapper {
+    background-color: #4286f4;
+}
+
 
 /* Home */
 
@@ -66,6 +74,13 @@ span.area__menu-name {
     h4 {
         font-size: 23px !important;
     }
+}
+
+
+/* Login */
+
+.login_background {
+    background: #ffffff !important;
 }
 
 
@@ -106,4 +121,54 @@ span.area__menu-name {
     right: 23px;
     bottom: 23px;
     position: fixed;
+}
+
+
+/* Discussion */
+
+.message__name {
+    color: gray !important;
+}
+
+#discussion__messages {
+    border: 0px;
+    bottom: 133px;
+    overflow-y: scroll;
+    position: absolute;
+    width: 100%;
+    top: 64px;
+}
+
+.discussion__message {
+    border: solid 1px black;
+    background-color: rgba(27, 25, 25, 0.2) !important;
+    border-bottom-color: transparent !important;
+}
+
+#discussion__new-message-area {
+    bottom: 0px;
+    width: 100%;
+    position: fixed;
+    border: solid 2px gray;
+    padding: 5px 10px 0px 10px !important;
+    background-color: white;
+}
+
+.character-counter {
+    right: 0px !important;
+    bottom: 20px !important;
+    position: absolute !important;
+}
+
+.discussion__new-message-input-field {
+    margin-top: 0px !important;
+}
+
+#class__discussion {
+    display: none;
+}
+
+#discussion-wrapper,
+#button__exit-discussion {
+    display: none;
 }

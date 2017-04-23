@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html class="page__home">
+<!-- Create the html document root tag -->
+<html class="page__classes">
+
+<!-- Create the documents head -->
 
 <head>
     <!-- Declare stylesheets for icons, fonts, and styling -->
@@ -16,44 +19,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
+<!-- Create the documents body containing the page's content -->
+
 <body>
+    <!-- Create a nav element to contain the navbar content -->
     <nav>
+        <!-- Create the navbar with a div class nav-wrapper so materializecss knows it's the navbar -->
         <div class="nav-wrapper">
             <a class="button-collapse hide-on-large-only auth" data-activates="navigator__side" href="#"><i class="material-icons">menu</i></a>
             <a class="brand-logo center" href="#">Classes</a>
+            <!-- Create a list container to hold the navigation items on the left -->
             <ul class="right hide-on-med-and-down auth">
+                <!-- Add a navigation item -->
                 <li>
                     <a class="tooltip" data-position="bottom" data-tooltip="Home" href="..">
                         <i class="material-icons">home</i>
                     </a>
                 </li>
+                <!-- Add a navigation item -->
                 <li>
+                    <!-- Add a assignment icon to link to the work page -->
                     <a class="tooltip" data-position="bottom" data-tooltip="Work" href="../work/index.html">
                         <i class="material-icons">assignment</i>
                     </a>
                 </li>
+                <!-- Add a navigation item -->
                 <li>
+                    <!-- Add a class icon to link to the classes page -->
                     <a class="tooltip" data-position="bottom" data-tooltip="Classes" href="#">
                         <i class="material-icons">class</i>
                     </a>
                 </li>
+                <!-- Add a navigation item -->
                 <li>
+                    <!-- Add a message icon to link to the discussion page -->
                     <a class="tooltip" data-position="bottom" data-tooltip="Discussion" href="../discussion/index.html">
                         <i class="material-icons">message</i>
                     </a>
                 </li>
+                <!-- Add a navigation item -->
                 <li>
+                    <!-- Add a note to link to the notes page -->
                     <a class="tooltip" data-position="bottom" data-tooltip="Notes" href="../notes/index.html">
                         <i class="material-icons">note</i>
                     </a>
                 </li>
+                <!-- Add a navigation item -->
                 <li>
+                    <!-- Add a menu to open the user menu -->
                     <a class="dropdown-button tooltip" data-beloworigin="true" data-constrainwidth="false" data-activates="menu__user" data-position="bottom" data-tooltip="More" href="#">
                         <i class="material-icons">more_vert</i>
                     </a>
                 </li>
+                <!-- Create a list to contain the user menu options -->
                 <ul class="dropdown-content" id="menu__user">
+                    <!-- Add a user menu option -->
                     <li>
+                        <!-- Add a area for the user's name to be -->
                         <span class="area__menu-name truncate">Placeholder Name</span>
                     </li>
                     <!-- Create a menu link to the settings page -->
@@ -61,45 +83,64 @@
                         <!-- Create the button inside the menu option -->
                         <a class="waves-effect waves-light" href="../settings/index.html">Settings</a>
                     </li>
+                    <!-- Create a line between the rest of the items -->
                     <li class="divider"></li>
+                    <!-- Add a user menu option -->
                     <li>
+                        <!-- Add a button to allow the user to logout -->
                         <a class="waves-effect waves-red" id="button__logout" href="#">Logout</a>
                     </li>
                 </ul>
             </ul>
+            <!-- Create a list to contain the navigation items on the right side of the page -->
+            <!-- Only show this when the user is logged out -->
             <ul class="right no-auth">
+                <!-- Add a navigation item -->
                 <li>
+                    <!-- Add a button to link to the Login page -->
                     <a class="waves-effect waves-yellow btn" data-activates="dropdown__authenticate" href="../login/index.html">Login</a>
                 </li>
             </ul>
+            <!-- Create a slide-out sidebar navigation list with the id navigator__side -->
             <ul class="side-nav" id="navigator__side">
+                <!-- Create a list / navigation item -->
                 <li>
                     <div class="deep-purple lighten-2 area__menu-user">
                         <h6 class="area__menu-name truncate"><u>Placeholder Name</u></h6>
                         <i class="area__menu-email truncate">email@provider.domain</i>
                     </div>
                 </li>
+                <!-- Create a list / navigation item -->
                 <li>
+                    <!-- Create a link to the home page -->
                     <a href="/">
                         <i class="material-icons">home</i>Home
                     </a>
                 </li>
+                <!-- Create a list / navigation item -->
                 <li>
+                    <!-- Create a link to the work page -->
                     <a href="../work/index.html">
                         <i class="material-icons">assignment</i>Work
                     </a>
                 </li>
+                <!-- Create a list / navigation item -->
                 <li>
+                    <!-- Create a link to the classes page -->
                     <a href="#">
                         <i class="material-icons">class</i>Classes
                     </a>
                 </li>
+                <!-- Create a list / navigation item -->
                 <li>
+                    <!-- Create a link to the discussion page -->
                     <a href="../discussion/index.html">
                         <i class="material-icons">message</i>Discussion
                     </a>
                 </li>
+                <!-- Create a list / navigation item -->
                 <li>
+                    <!-- Create a link to the notes page -->
                     <a href="../notes/index.html">
                         <i class="material-icons">note</i>Notes
                     </a>
@@ -112,73 +153,127 @@
                         <i class="material-icons">settings</i>Settings
                     </a>
                 </li>
+                <!-- Create a logout button to be put at the bottom of the menu with the id button__logout_sidenav -->
                 <a class="btn waves-effect waves-red" id="button__logout_sidenav" href="#">Logout</a>
             </ul>
         </div>
     </nav>
+    <!-- Create the main element to contain the page's primary content -->
     <main>
+        <!-- Create a element to show when the user is not logged in -->
         <div class="no-auth">
+            <!-- Create a new row to organize the UI -->
+            <div class="row">
+                <!-- Create a new element to center align the class icon -->
+                <div class="center-align">
+                    <!-- Show a class icon -->
+                    <i class="material-icons icon__250">class</i>
+                </div>
+                <!-- Create a new element to center align text -->
+                <h4 class="center-align">
+                    Manage your classes or join a class from a teacher.
+                </h4>
+                <!-- Create a new element to center align text -->
+                <h4 class="center-align">
+                    If you're a teacher create one for your students to join or manage another one.
+                </h4>
+            </div>
         </div>
+        <!-- Create a div to show when there is a user logged in -->
         <div class="auth">
+            <!-- Create a div to contain the account setup overlay -->
             <div class="section__account-setup purple lighten-5">
+                <!-- Create a header to contain the overlay name -->
                 <h4 class="center-align">Account Setup</h4>
+                <!-- Create a paragraph element to give context to the overlay -->
                 <p class="center-align">Before you can begin using this app we need to know some things about you.</p>
+                <!-- Create a vertical alignment wrapper to vertically align content -->
                 <div class="valign-wrapper">
+                    <!-- Create a new row to organize the UI -->
                     <div class="row">
+                        <!-- Create a new input-field wrapper -->
                         <div class="input-field">
+                            <!-- Create a selection area -->
                             <select id="select__account-type">
-                            <option value="" disabled>Choose your option</option>
-                            <option value="student" selected>Student</option>
-                            <option value="teacher">Teacher</option>
-                        </select>
+                               <!-- Add instructions for the selection area -->
+                               <option value="" disabled>Choose your option</option>
+                               <!-- Add an option to the selection area for a student account -->
+                               <option value="student" selected>Student</option>
+                                <!-- Add an option to the selection area for a teacher account -->
+                               <option value="teacher">Teacher</option>
+                           </select>
+                            <!-- Create a label for the input-field -->
                             <label>Account Type</label>
                         </div>
                     </div>
                 </div>
+                <!-- Create a new row to organize the UI -->
                 <div class="row">
+                    <!-- Create an input-field wrapper that always full width -->
                     <div class="input-field col l12">
+                        <!-- Create a text area to collect feedback on the users reason for use -->
                         <textarea class="materialize-textarea" id="textarea__reason-for-use"></textarea>
+                        <!-- Create a label for the input-field -->
                         <label for="textarea__reason-for-use">Reason for Use(Optional)</label>
                     </div>
                 </div>
+                <!-- Create a vertical alignment wrapper to vertically align content -->
                 <div class="valign-wrapper">
+                    <!-- Create a new row to organize the UI -->
                     <div class="row">
+                        <!-- Create a button to submit the account setup data with the id button_submit-account-setup -->
                         <a class="waves-effect waves-light btn-large" id="button_submit-account-setup">Ok</a>
                     </div>
                 </div>
             </div>
+            <!-- Create a list to contain the user's classes -->
             <ul class="collection with-header" id="classes-wrapper">
+                <!-- Add a header to tell the user its displaying their classes -->
                 <li class="collection-header">
-                    <h4>Classes</h4>
+                    <h4>Your Classes</h4>
                 </li>
+                <!-- Add a message to show when the user has to classes -->
                 <li class="collection-item" id="message__no-classes">
                     <h4 class="center-align">
                         You have no classes!
                     </h4>
                 </li>
+                <!-- Create a template for a new class -->
                 <li class="collection-item" :id="cls.id" v-for="cls in classes" :key="cls.id">
+                    <!-- Create a new row to organize the UI -->
                     <div class="row">
+                        <!-- Create elements to contain the name and the descriptor -->
                         <span class="col l8 s9">{{ cls.details.name }} - <i>{{ cls.details.descriptor }}</i></span>
+                        <!-- Create a button to delete / leave a class -->
                         <a class="right waves-effect waves-gray" v-on:click="deleteClass(cls.id)" href="#">
                             <i class="material-icons red-text">delete</i>
                         </a>
-                        <a class="right waves-effect waves-gray" v-on:click="editClass(cls.id,cls.details)" href="#">
+                        <!-- Create a button to create a class but on show if the user is a teacher -->
+                        <a class="right waves-effect waves-gray" v-on:click="editClass(cls.id,cls.details)" href="#" v-if="teacher">
                             <i class="material-icons purple-text">create</i>
                         </a>
+                        <!-- Create a button to view the people in a class -->
                         <a class="right waves-effect waves-gray" v-on:click="viewPeople(cls.id)" href="#">
                             <i class="material-icons">people</i>
                         </a>
-                        <span class="right col l3 s12">Join Code | <b>{{ cls.id }}</b></span>
+                        <!-- Create a element to contain the classes join code -->
+                        <span class="right col l3 s12" v-if="teacher">Join Code | <b>{{ cls.id }}</b></span>
                     </div>
                 </li>
             </ul>
+            <!-- Create a element to be shown if the users a teacher -->
             <div class="teacher">
+                <!-- Create a button that expands to two -->
                 <div class="fixed-action-btn horizontal">
+                    <!-- Show a button to create a class -->
                     <a class="btn-floating btn-large waves-effect waves-light green" id="button_teacher-create-edit-class">
                         <i class="large material-icons">create</i>
                     </a>
+                    <!-- Create an element to contain the other buttons -->
                     <ul>
+                        <!-- Create a item to contain another button -->
                         <li>
+                            <!-- Add a button to join a class -->
                             <a class="btn-floating waves-effect waves-light blue button__join-class">
                                 <i class="material-icons">add</i>
                             </a>
@@ -186,7 +281,9 @@
                     </ul>
                 </div>
             </div>
+            <!-- Create a element to be shown if the users a student -->
             <div class="student">
+                <!-- Add a button to join a class -->
                 <a class="btn-floating btn-large waves-effect waves-light green button__join-class">
                     <i class="material-icons">add</i>
                 </a>
@@ -201,7 +298,7 @@
                         <h4 class="col s8">Edit Class</h4>
                         <!-- Create a button to close the dialog with the id button__close-create-edit-class -->
                         <a class="waves-effect waves-light btn-flat right" id="button__close-create-edit-class">
-                            <!-- Show a close icont inside the button -->
+                            <!-- Show a close icon inside the button -->
                             <i class="material-icons">close</i>
                         </a>
                     </div>
@@ -214,19 +311,21 @@
                             <!-- Create a label for the input-field -->
                             <label for="text__create-edit-note-name">Name</label>
                         </div>
+                        <!-- Create a switch to change the joinability of the app -->
                         <div class="switch col s12 l4 joinability">
                             <h6>Joinability</h6>
                             <br>
                             <label>
-                                Closed
-                                <input id="switch__joinability" type="checkbox">
-                                <span class="lever"></span>
-                                Joinable
-                            </label>
+                               Closed
+                               <input id="switch__joinability" type="checkbox">
+                               <span class="lever"></span>
+                               Joinable
+                           </label>
                         </div>
                     </div>
                     <!-- Create a new row to organize the UI -->
                     <div class="row">
+                        <!-- Create an text field to hold a descriptor for the class -->
                         <div class="input-field col s12">
                             <input class="create-edit-class-field" id="text__new-class-descriptor" type="text" data-length="25">
                             <label for="input_text">Descriptor</label>
@@ -249,7 +348,7 @@
                         <h4 class="col s8">Join Class</h4>
                         <!-- Create a button to close the dialog with the id button_close-join-class -->
                         <a class="waves-effect waves-light btn-flat right" id="button__close-join-class">
-                            <!-- Show a close icont inside the button -->
+                            <!-- Show a close icon inside the button -->
                             <i class="material-icons">close</i>
                         </a>
                     </div>
@@ -275,7 +374,7 @@
     <!-- Load Firebase to use its authentication and database -->
     <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
     <!-- Load jQuery for use in other scripts and utility methods -->
-    <script src="../js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="../js/jquery-3.2.1.min.js" type="text/javascript"></script>
     <!-- Load materializecss because for use in a lot of the UI -->
     <script src="../js/materialize.min.js" type="text/javascript"></script>
     <!-- Load Vue js to simplify DOM management -->

@@ -19,14 +19,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<!-- Create the documents body containg the pages content -->
+<!-- Create the documents body containing the page's content -->
 
 <body>
     <!-- Create a nav element to contain the navbar content -->
     <nav>
-        <!-- Create the navbar with a div classed nav-wrapper so materializecss knows its the navbar -->
+        <!-- Create the navbar with a div class nav-wrapper so materializecss knows it's the navbar -->
         <div class="nav-wrapper">
-            <!-- Create a button to open the side navigtor -->
+            <!-- Create a button to open the side navigation -->
             <a class="button-collapse hide-on-large-only auth" data-activates="navigator__side" href="#">
                 <!-- Show a menu icon in the button -->
                 <i class="material-icons">menu</i>
@@ -83,11 +83,11 @@
                         <i class="material-icons">more_vert</i>
                     </a>
                 </li>
-                <!-- Create a list containg the user menu options -->
+                <!-- Create a list containing the user menu options -->
                 <ul class="dropdown-content" id="menu__user">
-                    <!-- Create a menu option for the users name -->
+                    <!-- Create a menu option for the user's name -->
                     <li>
-                        <!-- Create a span with the text Placeholder Name to be replace with the users name and truncate if too long -->
+                        <!-- Create a span with the text Placeholder Name to be replace with the user's name and truncate if too long -->
                         <span class="area__menu-name truncate">Placeholder Name</span>
                     </li>
                     <!-- Create a menu link to the settings page -->
@@ -95,7 +95,7 @@
                         <!-- Create the button inside the menu option -->
                         <a class="waves-effect waves-light" href="../settings/index.html">Settings</a>
                     </li>
-                    <!-- Create a divder to sperate the logout button from the rest of the options -->
+                    <!-- Create a divider to separate the logout button from the rest of the options -->
                     <li class="divider"></li>
                     <!-- Create a menu option to logout -->
                     <li>
@@ -118,9 +118,9 @@
                 <li>
                     <!-- Create a container for the users info -->
                     <div class="deep-purple lighten-2 area__menu-user">
-                        <!-- Create a header with the text Placeholder Name to be repaced with the users name and truncate if too long -->
+                        <!-- Create a header with the text Placeholder Name to be replaced with the user's name and truncate if too long -->
                         <h6 class="area__menu-name truncate"><u>Placeholder Name</u></h6>
-                        <!-- Create an italic container with the text email@provider.domain to be replaced with the users email -->
+                        <!-- Create an italic container with the text email@provider.domain to be replaced with the user's email -->
                         <i class="area__menu-email">email@provider.domain</i>
                     </div>
                 </li>
@@ -177,8 +177,35 @@
             </ul>
         </div>
     </nav>
-    <!-- Create the main element to contain the pages primary content -->
+    <!-- Create the main element to contain the page's primary content -->
     <main>
+        <!-- Create a element to show when the user is not logged in -->
+        <div class="no-auth">
+            <!-- Create a new row to organize the UI -->
+            <div class="row">
+                <!-- Create a new element to center align the assignment icon -->
+                <div class="center-align">
+                    <!-- Show a class icon -->
+                    <i class="material-icons icon__250">assignment</i>
+                </div>
+                <!-- Create a new element to center align text -->
+                <h4 class="center-align">
+                    Nobody wants to be the person who forgot to do their project.
+                </h4>
+                <!-- Create a new element to center align text -->
+                <h4 class="center-align">
+                    Now you won't, thanks to the work tab.
+                </h4>
+                <!-- Create a new element to center align text -->
+                <h5 class="center-align">
+                    As the name suggests, you can keep tabs on your latest assignments.
+                </h5>
+                <!-- Create a new element to center align text -->
+                <h5 class="center-align">
+                    Add an assignment and set a due date. School Pal will keep track so you know when to do it.
+                </h5>
+            </div>
+        </div>
         <!-- Create a div to show when there is a user logged in -->
         <div class="auth">
             <div class="progress">
@@ -190,7 +217,7 @@
                 <h4 class="center-align">Account Setup</h4>
                 <!-- Create a paragraph element to give context to the overlay -->
                 <p class="center-align">Before you can begin using this app we need to know some things about you.</p>
-                <!-- Create a vertical alignment wrapper to verticaly align content -->
+                <!-- Create a vertical alignment wrapper to vertically align content -->
                 <div class="valign-wrapper">
                     <!-- Create a new row to organize the UI -->
                     <div class="row">
@@ -198,13 +225,13 @@
                         <div class="input-field">
                             <!-- Create a selection area -->
                             <select id="select__account-type">
-                                <!-- Add instructions for the selection area -->
-                                <option value="" disabled>Choose your option</option>
-                                <!-- Add an option to the selection area for a student account -->
-                                <option value="student" selected>Student</option>
-                                 <!-- Add an option to the selection area for a teacher account -->
-                                <option value="teacher">Teacher</option>
-                            </select>
+                               <!-- Add instructions for the selection area -->
+                               <option value="" disabled>Choose your option</option>
+                               <!-- Add an option to the selection area for a student account -->
+                               <option value="student" selected>Student</option>
+                                <!-- Add an option to the selection area for a teacher account -->
+                               <option value="teacher">Teacher</option>
+                           </select>
                             <!-- Create a label for the input-field -->
                             <label>Account Type</label>
                         </div>
@@ -216,74 +243,112 @@
                     <div class="input-field col l12">
                         <!-- Create a text area to collect feedback on the users reason for use -->
                         <textarea class="materialize-textarea" id="textarea__reason-for-use"></textarea>
-                        <!-- Cretae a label for the input-field -->
+                        <!-- Create a label for the input-field -->
                         <label for="textarea__reason-for-use">Reason for Use(Optional)</label>
                     </div>
                 </div>
-                <!-- Create a vertical alignment wrapper to verticaly align content -->
+                <!-- Create a vertical alignment wrapper to vertically align content -->
                 <div class="valign-wrapper">
-                    <!-- Creare a new row to organize the UI -->
+                    <!-- Create a new row to organize the UI -->
                     <div class="row">
                         <!-- Create a button to submit the account setup data with the id button_submit-account-setup -->
                         <a class="waves-effect waves-light btn-large" id="button_submit-account-setup">Ok</a>
                     </div>
                 </div>
             </div>
+            <!-- Create a list to contain the user's work -->
             <ul class="collection" id="work-wrapper">
+                <!-- Create a template for work the user has -->
                 <li class="collection-item avatar" :id="work.id" v-for="work in work" :key="work.id">
+                    <!-- Show an assignment icon -->
                     <i class="material-icons circle">assignment</i>
+                    <!-- Set the title to the work's name and class -->
                     <span class="title col">{{ work.details.name }} - <i>{{ work.details.class }}</i></span>
+                    <!-- Create a button to delete the work -->
                     <a class="right waves-effect waves-gray red-text" v-on:click="deleteWork(work.id)" href="#">
+                        <!-- Show a delete icon -->
                         <i class="material-icons">delete</i>
                     </a>
+                    <!-- Create a button to edit the work -->
                     <a class="right waves-effect waves-green" v-on:click="editWork(work.id, work.details)" href="#">
+                        <!-- Show a edit icon -->
                         <i class="material-icons">edit</i>
                     </a>
+                    <!-- Create a button to view the work -->
                     <a class="right waves-effect waves-green black-text" v-on:click="viewWork(work.id,work.details)" href="#">
+                        <!-- Show a fullscreen icon -->
                         <i class="material-icons">fullscreen</i>
                     </a>
+                    <!-- Create a element to contain the assignments details -->
                     <p>
+                        <!-- Show 'Details' in bold text -->
                         <b>Details</b>
+                        <!-- Show a shortened version of the work's details -->
                         <span class="truncate">{{ work.details.details }}</span>
+                        <!-- Show 'Due' in bold text -->
                         <b>Due</b>
+                        <!-- Skip a line -->
                         <br>
+                        <!-- Show the work's due date -->
                         <span>{{ work.details.due }}</span>
                     </p>
                 </li>
             </ul>
+            <!-- Create a new modal to show the work -->
             <div class="modal modal-fixed-footer" id="modal__view-work">
+                <!-- Create a element to hold the modals content -->
                 <div class="modal-content">
+                    <!-- Create a new row to organize the UI -->
                     <div class="row">
+                        <!-- Create a place for the work's title to be -->
                         <h4 class="col s10" id="view-work_title"></h4>
+                        <!-- Create a button to close the modal -->
                         <a class="waves-effect waves-light btn-flat right modal-close">
                             <!-- Show a close icon in the close button -->
                             <i class="material-icons">close</i>
                         </a>
+                        <!-- Skip a line -->
                         <br>
+                        <!-- Create a place for the class to be -->
                         <h4 class="col s10" id="view-work_class"></h4>
                     </div>
+                    <!-- Create a new section to contain the work's details -->
                     <div class="section">
+                        <!-- Show the text 'Details' -->
                         <h5>Details</h5>
+                        <!-- Create a element for the work's details to be -->
                         <p id="view-work_details"></p>
                     </div>
+                    <!-- Create a new divider -->
                     <div class="divider"></div>
+                    <!-- Show the text 'Due' -->
                     <h5>Due</h5>
+                    <!-- Create a area for the due date to be -->
                     <span id="view-work_due"></span>
                 </div>
+                <!-- Create a footer for the modal -->
                 <div class="modal-footer">
+                    <!-- Create a button to close the modal with the text 'Ok' -->
                     <a class="modal-action modal-close waves-effect waves-green btn-flat" href="#!">Ok</a>
                 </div>
             </div>
+            <!-- Create a modal to edit / create work -->
             <div class="modal modal-fixed-footer" id="modal__create-edit-work">
+                <!-- Create a element to hold the modals primary content -->
                 <div class="modal-content">
+                    <!-- Create a new row to organize the UI -->
                     <div class="row">
+                        <!-- Show the text 'Edit Work' -->
                         <h4 class="col s8">Edit Work</h4>
+                        <!-- Create a button to close the modal -->
                         <a class="waves-effect waves-light btn-flat right" id="button__close-create-edit-work">
                             <!-- Show a close icon inside the button -->
                             <i class="material-icons">close</i>
                         </a>
                     </div>
+                    <!-- Create a new section for the user to input a name and class -->
                     <div class="section">
+                        <!-- Create a new row to organize the UI -->
                         <div class="row">
                             <!-- Create a input-field wrapper -->
                             <div class="input-field col l8 s12">
@@ -301,44 +366,70 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Create a divider -->
                     <div class="divider"></div>
+                    <!-- Create a new section for the user to set a due date -->
                     <div class="section">
+                        <!-- Show the text 'Due(Optional)' -->
                         <h5>Due(Optional)</h5>
+                        <!-- Create a new row to organize the UI -->
                         <div class="row">
-                            <a class="waves-effect waves-light btn tooltip col s12" id="button__open-work-due-date-picker" data-position="bottom" data-tooltip="Open a date picker to set a due date">Set Due Date</a>
+                            <!-- Create a button to open the datepicker -->
+                            <a class="waves-effect waves-light btn tooltip col s12" id="button__open-work-due-date-picker" data-position="bottom" data-tooltip="Open a datepicker to set a due date">Set Due Date</a>
                         </div>
+                        <!-- Create a new row to organize the UI -->
                         <div class="row">
+                            <!-- Create a input field wrapper -->
                             <div class="input-field col l5 s12">
-                                <input class="validate create-edit-work-field" id="number__work-hour-due" type="number" min="0" max="12">
+                                <!-- Create a field for the user to input an hour -->
+                                <input class="validate create-edit-work-field work-time-field" id="number__work-hour-due" type="number" min="0" max="12">
+                                <!-- Create a label that says hour -->
                                 <label for="number__work-due">Hour</label>
                             </div>
+                            <!-- Create a input field wrapper -->
                             <div class="input-field col l5 s12">
-                                <input class="validate create-edit-work-field" id="number__work-minute-due" type="number" min="0" max="59">
+                                <!-- Create a input field for the user to put the minute -->
+                                <input class="validate create-edit-work-field work-time-field" id="number__work-minute-due" type="number" min="0" max="59">
                                 <label for="number__work-due">Minute</label>
                             </div>
+                            <!-- Create a input field wrapper -->
                             <div class="input-field col l2 s12">
-                                <select class="create-edit-work-field" id="select__work-am-pm">
-                                <option value="" disabled selected></option>
-                                <option value="am">AM</option>
-                                <option value="pm">PM</option>
-                            </select>
+                                <!-- Create a select dropdown input -->
+                                <select class="create-edit-work-field work-time-field" id="select__work-am-pm">
+                                   <!-- Add a blank default option -->
+                                   <option value="" disabled selected></option>
+                                   <!-- Add a option for AM -->
+                                   <option value="am">AM</option>
+                                   <!-- Add a option for PM -->
+                                   <option value="pm">PM</option>
+                               </select>
+                                <!-- Create a label that says 'AM / PM' -->
                                 <label for="select__work-am-pm">AM / PM</label>
                             </div>
                         </div>
                     </div>
+                    <!-- Create a new divider -->
                     <div class="divider"></div>
+                    <!-- Create a new row to organize the UI -->
                     <div class="row">
+                        <!-- Create a new input field for the work details -->
                         <div class="input-field col s12">
+                            <!-- Create a input element for the works details -->
                             <input class="validate create-edit-work-field" id="text__create-edit-work-details" type="text" data-length="150">
+                            <!-- Create a label that says 'Details' -->
                             <label for="input_text">Details</label>
                         </div>
                     </div>
                 </div>
+                <!-- Create a footer for the modal -->
                 <div class="modal-footer">
+                    <!-- Create a button to create the work -->
                     <a class="modal-action waves-effect btn-flat" id="button__finish-create-edit-work" href="#">Ok</a>
                 </div>
             </div>
+            <!-- Create the datepicker input -->
             <input class="datepicker" id="date__create-edit-work-due-date" type="date" hidden>
+            <!-- Create a button to create work -->
             <a class="btn-floating btn-large waves-effect waves-green blue" id="button__create-work" data-target="modal__create-edit-work">
                 <!-- Show a plus icon in the button -->
                 <i class="material-icons">create</i>
@@ -348,11 +439,12 @@
     <!-- Load Firebase to use its authentication and database -->
     <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
     <!-- Load jQuery for use in other scripts and utility methods -->
-    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
     <!-- Load materializecss because it is used for a lot of the UI -->
     <script type="text/javascript" src="../js/materialize.min.js"></script>
     <!-- Load Vue js to simplify DOM management -->
     <script type="text/javascript" src="../js/vue.min.js"></script>
+    <!-- Load moment as a date parsing utility -->
     <script type="text/javascript" src="../js/moment.min.js"></script>
     <!-- Load the primary javascript file -->
     <script type="text/javascript" src="../js/main.js"></script>

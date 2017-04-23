@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Create the html document root tag -->
-<html class="page__home">
+<html>
 
 <!-- Create the documents head tag-->
 
@@ -19,14 +19,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<!-- Create the documents body containg the pages content -->
+<!-- Create the documents body containing the page's content -->
 
 <body>
     <!-- Create a nav element to contain the navbar content -->
     <nav>
-        <!-- Create the navbar with a div classed nav-wrapper so materializecss knows its the navbar -->
+        <!-- Create the navbar with a div class nav-wrapper so materializecss knows it's the navbar -->
         <div class="nav-wrapper">
-            <!-- Create a button to open the side navigtor -->
+            <!-- Create a button to open the side navigation -->
             <a class="button-collapse hide-on-large-only auth" data-activates="navigator__side" href="#">
                 <!-- Show a menu icon in the button -->
                 <i class="material-icons">menu</i>
@@ -45,7 +45,7 @@
                 </li>
                 <!-- Create a new list item / navigation option for larger screens -->
                 <li>
-                    <!-- Create a link to the assignments page with the tooltip Work -->
+                    <!-- Create a link to the work page with the tooltip Work -->
                     <a class="tooltip" data-position="bottom" data-tooltip="Work" href="../work/index.html">
                         <!-- Show an assignments icon for the link -->
                         <i class="material-icons">assignment</i>
@@ -83,11 +83,11 @@
                         <i class="material-icons">more_vert</i>
                     </a>
                 </li>
-                <!-- Create a list containg the user menu options -->
+                <!-- Create a list containing the user menu options -->
                 <ul class="dropdown-content" id="menu__user">
-                    <!-- Create a menu option for the users name -->
+                    <!-- Create a menu option for the user's name -->
                     <li>
-                        <!-- Create a span with the text Placeholder Name to be replace with the users name and truncate if too long -->
+                        <!-- Create a span with the text Placeholder Name to be replace with the user's name and truncate if too long -->
                         <span class="area__menu-name truncate">Placeholder Name</span>
                     </li>
                     <!-- Create a menu link to the settings page -->
@@ -95,7 +95,7 @@
                         <!-- Create the button inside the menu option -->
                         <a class="waves-effect waves-light" href="../settings/index.html">Settings</a>
                     </li>
-                    <!-- Create a divder to sperate the logout button from the rest of the options -->
+                    <!-- Create a divider to separate the logout button from the rest of the options -->
                     <li class="divider"></li>
                     <!-- Create a menu option to logout -->
                     <li>
@@ -118,9 +118,9 @@
                 <li>
                     <!-- Create a container for the users info -->
                     <div class="deep-purple lighten-2 area__menu-user">
-                        <!-- Create a header with the text Placeholder Name to be repaced with the users name and truncate if too long -->
+                        <!-- Create a header with the text Placeholder Name to be replaced with the user's name and truncate if too long -->
                         <h6 class="area__menu-name truncate"><u>Placeholder Name</u></h6>
-                        <!-- Create an italic container with the text email@provider.domain to be replaced with the users email -->
+                        <!-- Create an italic container with the text email@provider.domain to be replaced with the user's email -->
                         <i class="area__menu-email">email@provider.domain</i>
                     </div>
                 </li>
@@ -177,8 +177,31 @@
             </ul>
         </div>
     </nav>
-    <!-- Create the main element to contain the pages primary content -->
+    <!-- Create the main element to contain the page's primary content -->
     <main>
+        <!-- Create a element to be shown when the user is not logged in -->
+        <div class="no-auth">
+            <!-- Create a row to organize the ui -->
+            <div class="row">
+                <!-- Create a element to align its content to the center -->
+                <div class="center-align">
+                    <!-- Show a notes icon the size of 250 pixels -->
+                    <i class="material-icons icon__250">note</i>
+                </div>
+                <!-- Create a header size four with its text aligned to the center -->
+                <h4 class="center-align">
+                    Notes allow you to keep track of things you were doing so you don't forget them.
+                </h4>
+                <!-- Create a header size five with its text aligned to the center -->
+                <h5 class="center-align">
+                    School Pal has them conveniently integrated for you ease of use.
+                </h5>
+                <!-- Create a header size five with its text aligned to the center -->
+                <h5 class="center-align">
+                    Just hit add note, type in a title and the note itself, and congratulations, you're good to go.
+                </h5>
+            </div>
+        </div>
         <!-- Create a div to show when there is a user logged in -->
         <div class="auth">
             <!-- Create a div to contain the account setup overlay -->
@@ -187,7 +210,7 @@
                 <h4 class="center-align">Account Setup</h4>
                 <!-- Create a paragraph element to give context to the overlay -->
                 <p class="center-align">Before you can begin using this app we need to know some things about you.</p>
-                <!-- Create a vertical alignment wrapper to verticaly align content -->
+                <!-- Create a vertical alignment wrapper to vertically align content -->
                 <div class="valign-wrapper">
                     <!-- Create a new row to organize the UI -->
                     <div class="row">
@@ -195,13 +218,13 @@
                         <div class="input-field">
                             <!-- Create a selection area -->
                             <select id="select__account-type">
-                                <!-- Add instructions for the selection area -->
-                                <option value="" disabled>Choose your option</option>
-                                <!-- Add an option to the selection area for a student account -->
-                                <option value="student" selected>Student</option>
-                                 <!-- Add an option to the selection area for a teacher account -->
-                                <option value="teacher">Teacher</option>
-                            </select>
+                               <!-- Add instructions for the selection area -->
+                               <option value="" disabled>Choose your option</option>
+                               <!-- Add an option to the selection area for a student account -->
+                               <option value="student" selected>Student</option>
+                                <!-- Add an option to the selection area for a teacher account -->
+                               <option value="teacher">Teacher</option>
+                           </select>
                             <!-- Create a label for the input-field -->
                             <label>Account Type</label>
                         </div>
@@ -213,13 +236,13 @@
                     <div class="input-field col l12">
                         <!-- Create a text area to collect feedback on the users reason for use -->
                         <textarea class="materialize-textarea" id="textarea__reason-for-use"></textarea>
-                        <!-- Cretae a label for the input-field -->
+                        <!-- Create a label for the input-field -->
                         <label for="textarea__reason-for-use">Reason for Use(Optional)</label>
                     </div>
                 </div>
-                <!-- Create a vertical alignment wrapper to verticaly align content -->
+                <!-- Create a vertical alignment wrapper to vertically align content -->
                 <div class="valign-wrapper">
-                    <!-- Creare a new row to organize the UI -->
+                    <!-- Create a new row to organize the UI -->
                     <div class="row">
                         <!-- Create a button to submit the account setup data with the id button_submit-account-setup -->
                         <a class="waves-effect waves-light btn-large" id="button_submit-account-setup">Ok</a>
@@ -228,15 +251,15 @@
             </div>
             <!-- Create a new row to organize the UI with the id notes-wrapper -->
             <div class="row" id="notes-wrapper">
-                <!-- Create a template element for a note and tell the Vue libaray to create a new note for each note passed to it -->
+                <!-- Create a template element for a note and tell the Vue library to create a new note for each note passed to it -->
                 <div class="col s12 m4 l4" v-for="note in notes">
-                    <!-- Create a div to contain the notes contain and dynamicaly assign the note its id -->
+                    <!-- Create a div to contain the notes contain and dynamically assign the note its id -->
                     <div class="card blue-grey darken-1" :id="note.id">
                         <!-- Create a div to wrap the cards primary content -->
                         <div class="card-content white-text">
-                            <!-- Create a span to contain the cards title and dynamicaly give the note its title also truncate if too long -->
+                            <!-- Create a span to contain the cards title and dynamically give the note its title also truncate if too long -->
                             <span class="card-title truncate">{{ note.details.name }}</span>
-                            <!-- Create a paragraph to contain the notes message and and dynamicaly give the note its message which will be truncated -->
+                            <!-- Create a paragraph to contain the notes message and and dynamically give the note its message which will be truncated -->
                             <p class="truncate">{{ note.details.message }}</p>
                         </div>
                         <!-- Create an area contain actions for the note -->
@@ -251,9 +274,9 @@
                     </div>
                 </div>
             </div>
-            <!-- Create a modal for viewing the note -->
+            <!-- Create a model for viewing the note -->
             <div class="modal modal-fixed-footer" id="modal_view-note">
-                <!-- Create a div for containg the modal primary content -->
+                <!-- Create a div for containing the modal primary content -->
                 <div class="modal-content">
                     <!-- Create a new row to organize the UI -->
                     <div class="row">
@@ -291,7 +314,7 @@
                         <h4 class="col s8">Edit Note</h4>
                         <!-- Create a button to close the dialog with the id button__close-create-create-edit-note -->
                         <a class="waves-effect waves-light btn-flat right" id="button__close-create-create-edit-note">
-                            <!-- Show a close icont inside the button -->
+                            <!-- Show a close icon inside the button -->
                             <i class="material-icons">close</i>
                         </a>
                     </div>
@@ -332,7 +355,7 @@
     <!-- Load Firebase to use its authentication and database -->
     <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
     <!-- Load jQuery for use in other scripts and utility methods -->
-    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
     <!-- Load materializecss because it is used for a lot of the UI -->
     <script type="text/javascript" src="../js/materialize.min.js"></script>
     <!-- Load Vue js to simplify DOM management -->

@@ -5,6 +5,9 @@
 <!-- Create the documents head -->
 
 <head>
+    <!-- Declare stylesheets for icons, fonts, and styling -->
+    <!-- Load the default stylesheet for the app -->
+    <link type="text/css" rel="stylesheet" href="../css/default.css" />
     <!-- Load Google Icon Font -->
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Load the materializecss stylesheet to be utilized -->
@@ -16,121 +19,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
-<!-- Create the documents body containg the pages content -->
+<!-- Create the documents body containing the page's content -->
 
-<body>
+<body class="login_background">
     <!-- Create a nav element to contain the navbar content -->
     <nav>
-        <!-- Create the navbar with a div classed nav-wrapper so materializecss knows its the navbar -->
+        <!-- Create the navbar with a div class nav-wrapper so materializecss knows it's the navbar -->
         <div class="nav-wrapper">
+            <!-- Create a list container to hold the navigation items on the left -->
+            <ul class="left">
+                <!-- Add a navigation item -->
+                <li>
+                    <!-- Add a home icon to link to the home page -->
+                    <a href="../">
+                        <i class="material-icons">home</i>
+                    </a>
+                </li>
+            </ul>
             <!-- Create title with page name and center it in the navbar -->
             <a class="brand-logo center" href="#">Login</a>
         </div>
     </nav>
-    <!-- Create the main element to contain the pages primary content -->
+    <!-- Create the main element to contain the page's primary content -->
     <main>
         <!-- Create a div to show when there is no user logged in -->
         <div class="no-auth">
-            <!-- Create an element with the class tabs to utilize materializecss's tabs for Login and Signup -->
-            <ul class="tabs">
-                <!-- Create an element to contain the tabs in one row -->
-                <div class="row">
-                    <!-- Create a button(tab) for the login tab -->
-                    <li class="tab col l6">
-                        <a href="#tab__login">Login</a>
-                    </li>
-                    <!-- Create a button(tab) for the signup tab -->
-                    <li class="tab col l6">
-                        <a href="#tab__signup">Signup</a>
-                    </li>
-                </div>
+            <!-- Create an element with the class tabs to utilize materializecss tabs for Login and Signup -->
+            <ul class="tabs row">
+                <!-- Create blank spacer elements -->
+                <li class="col s0 l3"></li>
+                <!-- Create a button(tab) for the login tab -->
+                <li class="tab col s6 l3">
+                    <a href="#tab__login">Login</a>
+                </li>
+                <!-- Create a button(tab) for the signup tab -->
+                <li class="tab col s6 l3">
+                    <a href="#tab__signup">Sign Up</a>
+                </li>
+                <!-- Create blank spacer elements -->
+                <li class="col s0 l3"></li>
             </ul>
             <!-- Create a div containing the content for the login tab -->
             <div id="tab__login">
                 <!-- Create an element to wrap the email text field on a single line -->
                 <div class="row">
+                    <!-- Create blank spacer elements -->
+                    <div class="col s0 m2 l3"></div>
                     <!-- Create an element for wrapping the text field -->
-                    <div class="input-field">
+                    <div class="input-field col s12 m8 l6">
                         <!-- Create the element for the user to put their email into -->
                         <input class="validate login__field" id="text__login-email" type="email">
                         <!--  Create a label for the email input element to be shown -->
                         <label for="text__login-email">Email</label>
                     </div>
+                    <!-- Create blank spacer elements -->
+                    <div class="col s0 m2 l3"></div>
                 </div>
-                <!-- Create an element to wrap the password text field on a single line -->
                 <div class="row">
+                    <!-- Create blank spacer elements -->
+                    <div class="col s0 m2 l3"></div>
                     <!-- Create an element for wrapping the text field -->
-                    <div class="input-field">
+                    <div class="input-field col s12 m8 l6">
                         <!-- Create the element for the user to put their password into -->
                         <input class="validate login__field" id="text__login-password" type="password">
                         <!--  Create a label for the password input element to be shown -->
                         <label for="text__login-password">Password</label>
                     </div>
+                    <!-- Create blank spacer elements -->
+                    <div class="col s0 m2 l3"></div>
                 </div>
                 <!-- Create an element to wrap the buttons on a single line -->
                 <div class="row">
-                    <!-- Create a button for the user to login with the data provided -->
-                    <a class="waves-effect waves-light btn-large col l5 s6" id="button__login-password">Login</a>
-                    <!-- Create a button to login with a Google account in a popup -->
-                    <a class="waves-effect waves-light btn-flat btn-large col l4 s6" id="button__login-google">Google</a>
+                    <!-- Create blank spacer elements -->
+                    <div class="col s0 m2 l3"></div>
+                    <div class="input-field col s12 m8 l6">
+                        <!-- Create a button for the user to login with the data provided -->
+                        <a class="waves-effect waves-light btn-large col l5 s6" id="button__login-password">Login</a>
+                        <!-- Create a button to login with a Google account in a popup -->
+                        <a class="right waves-effect waves-light btn-flat btn-large col l4 s6" id="button__login-google">Google</a>
+                    </div>
+                    <!-- Create blank spacer elements -->
+                    <div class="col s0 m2 l3"></div>
                 </div>
             </div>
             <!-- Create an element to contain the signup tabs content -->
             <div id="tab__signup">
-                <!-- Create an element to wrap the first name text field on a single line -->
                 <div class="row">
+                    <!-- Create blank spacer elements -->
+                    <div class="col s0 m2 l3"></div>
                     <!-- Create an element for wrapping the text field -->
-                    <div class="input-field">
+                    <div class="input-field col s12 m4 l3">
                         <!-- Create the element for the user to put their first name into -->
                         <input class="validate signup__field" id="text__signup-first-name" type="text">
                         <!--  Create a label for the signup first name input element to be shown -->
                         <label for="text__signup-first-name">First Name</label>
                     </div>
-                </div>
-                <!-- Create an element to wrap the last name text field on a single line -->
-                <div class="row">
-                    <!-- Create an element for wrapping the text field -->
-                    <div class="input-field">
+                    <div class="input-field col s12 m4 l3">
                         <!-- Create the element for the user to put their last name into -->
                         <input class="validate signup__field" id="text__signup-last-name" type="text">
                         <!--  Create a label for the signup last name input element to be shown -->
                         <label for="text__signup-last-name">Last Name</label>
                     </div>
+                    <!-- Create blank spacer elements -->
+                    <div class="col s0 m2 l3"></div>
                 </div>
                 <!-- Create an element to wrap the password text field on a single line -->
                 <div class="row">
+                    <!-- Create blank spacer elements -->
+                    <div class="col s0 m2 l3"></div>
                     <!-- Create an element for wrapping the text field -->
-                    <div class="input-field">
+                    <div class="input-field col s12 m8 l6">
                         <!-- Create the element for the user to put their password into -->
                         <input class="validate signup__field" id="text__signup-password" type="password">
-                        <!--  Create a label for the singup password input element to be shown -->
+                        <!--  Create a label for the signup password input element to be shown -->
                         <label for="text__signup-password">Password</label>
                     </div>
+                    <!-- Create blank spacer elements -->
+                    <div class="col s0 m2 l3"></div>
                 </div>
                 <!-- Create an element to wrap the password confirm text field on a single line -->
                 <div class="row">
+                    <!-- Create blank spacer elements -->
+                    <div class="col s0 m2 l3"></div>
                     <!-- Create an element for wrapping the text field -->
-                    <div class="input-field">
+                    <div class="input-field col s12 m8 l6">
                         <!-- Create the element for the user to put their password to confirm into -->
                         <input class="validate signup__field" id="text__signup-password-confirm" type="password">
                         <!-- Create a label for the signup password confirm input element to be shown -->
                         <label for="text__signup-password-confirm">Password(Confirm)</label>
                     </div>
+                    <!-- Create blank spacer elements -->
+                    <div class="col s0 m2 l3"></div>
                 </div>
                 <!-- Create an element to wrap the email text field on a single line -->
                 <div class="row">
+                    <!-- Create blank spacer elements -->
+                    <div class="col s0 m2 l3"></div>
                     <!-- Create an element for wrapping the text field -->
-                    <div class="input-field">
+                    <div class="input-field col s12 m8 l6">
                         <!-- Create the element for the user to put their email into -->
                         <input class="validate signup__field" id="text__signup-email" type="email">
                         <!-- Create a label for the signup email element to be shown -->
                         <label data-error="Invalid Email" for="text__signup-email">Email</label>
                     </div>
+                    <!-- Create blank spacer elements -->
+                    <div class="col s0 m2 l3"></div>
                 </div>
-                <!-- Create an element to wrap the signup button on a single line -->
+                <!-- Create an element to wrap the buttons on a single line -->
                 <div class="row">
-                    <!-- Create a button for the user to click when the signup form is complete to validate and then create their account -->
-                    <a class="waves-effect waves-light btn-large" id="button__signup">Signup</a>
+                    <!-- Create blank spacer elements -->
+                    <div class="col s0 m2 l3"></div>
+                    <!-- Create a div to hold the centered button -->
+                    <div class="input-field col s12 m8 l6">
+                        <!-- Create a button for the user to click when the signup form is complete to validate and then create their account -->
+                        <a class="waves-effect waves-light btn-large" id="button__signup">Signup</a>
+                    </div>
+                    <!-- Create blank spacer elements -->
+                    <div class="col s0 m2 l3"></div>
                 </div>
             </div>
         </div>
@@ -139,12 +184,15 @@
             <!-- Create a header telling the user they are already logged in -->
             <h4 class="center-align">You Are Already Logged In!</h4>
             <div class="row">
-                <!-- Create a button for the user to click to return to the home page -->
+                <!-- Create blank spacer elements -->
                 <div class="col s4 m4 l5">
                 </div>
+                <!-- Create a div to hold the centered button -->
                 <div class="col s4 m4 l2">
+                    <!-- Create a button for the user to click to return to the home page -->
                     <a class="waves-effect waves-light btn-large" href="/">Back Home</a>
                 </div>
+                <!-- Create blank spacer elements -->
                 <div class="col s4 m4 l5">
                 </div>
             </div>
@@ -153,7 +201,7 @@
     <!-- Load the firebase script for utilization -->
     <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
     <!-- Load jQuery for use in other scripts -->
-    <script src="../js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="../js/jquery-3.2.1.min.js" type="text/javascript"></script>
     <!-- Load MaterializeCss for use on the site -->
     <script src="../js/materialize.min.js" type="text/javascript"></script>
     <!-- Load the primary javascript file -->

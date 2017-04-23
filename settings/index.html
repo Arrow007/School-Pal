@@ -179,40 +179,82 @@
     </nav>
     <!-- Create the main element to contain the pages primary content -->
     <main>
+        <!-- Create a element to show when the user is not logged in -->
+        <div class="no-auth">
+            <!-- Create a new row to organize the UI -->
+            <div class="row">
+                <!-- Create a new element to center align the class icon -->
+                <div class="center-align">
+                    <!-- Show a class icon -->
+                    <i class="material-icons icon__250">settings</i>
+                </div>
+                <!-- Create a new element to center align text -->
+                <h4 class="center-align">
+                    Please login or create an account to manage your accounts settings.
+                </h4>
+            </div>
+        </div>
+        <!-- Create a div to show when there is a user logged in -->
         <div class="auth">
+            <!-- Create a div to contain the account setup overlay -->
             <div class="section__account-setup purple lighten-5">
+                <!-- Create a header to contain the overlay name -->
                 <h4 class="center-align">Account Setup</h4>
+                <!-- Create a paragraph element to give context to the overlay -->
                 <p class="center-align">Before you can begin using this app we need to know some things about you.</p>
+                <!-- Create a vertical alignment wrapper to verticaly align content -->
                 <div class="valign-wrapper">
+                    <!-- Create a new row to organize the UI -->
                     <div class="row">
+                        <!-- Create a new input-field wrapper -->
                         <div class="input-field">
+                            <!-- Create a selection area -->
                             <select id="select__account-type">
-                            <option value="" disabled>Choose your option</option>
-                            <option value="student" selected>Student</option>
-                            <option value="teacher">Teacher</option>
-                        </select>
+                                <!-- Add instructions for the selection area -->
+                                <option value="" disabled>Choose your option</option>
+                                <!-- Add an option to the selection area for a student account -->
+                                <option value="student" selected>Student</option>
+                                 <!-- Add an option to the selection area for a teacher account -->
+                                <option value="teacher">Teacher</option>
+                            </select>
+                            <!-- Create a label for the input-field -->
                             <label>Account Type</label>
                         </div>
                     </div>
                 </div>
+                <!-- Create a new row to organize the UI -->
                 <div class="row">
+                    <!-- Create an input-field wrapper that always full width -->
                     <div class="input-field col l12">
+                        <!-- Create a text area to collect feedback on the users reason for use -->
                         <textarea class="materialize-textarea" id="textarea__reason-for-use"></textarea>
+                        <!-- Cretae a label for the input-field -->
                         <label for="textarea__reason-for-use">Reason for Use(Optional)</label>
                     </div>
                 </div>
-                <div class="valign-wrapper">
+                <!-- Create a container to wrap the content nicely -->
+                <div class="container">
+                    <!-- Create a new row to organize the UI -->
                     <div class="row">
-                        <a class="waves-effect waves-light btn-large" id="button_submit-account-setup">Ok</a>
+                        <!-- Create a buttont to delete the users account -->
+                        <a class="waves-effect waves-light btn-large red col s6" id="button__delete-account">Delete Account</a>
+                        <!-- Create a switch to confirm the user wants to delete their account -->
+                        <div class="switch col s6 center-align">
+                            <label>
+                                Don't Delete
+                                <input type="checkbox" id="switch__delete-account">
+                                <span class="lever"></span>
+                                Delete
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </main>
     <!-- Load Firebase to use its authentication and database -->
     <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
     <!-- Load jQuery for use in other scripts and utility methods -->
-    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
     <!-- Load materializecss because it is used for a lot of the UI -->
     <script type="text/javascript" src="../js/materialize.min.js"></script>
     <!-- Load Vue js to simplify DOM management -->
