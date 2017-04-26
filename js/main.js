@@ -183,7 +183,7 @@
         $('ul.tabs').tabs();
         // Initialize the selection dropdowns on the pages for use
         $('select').material_select();
-        // Initialize the models and prevent close on click off
+        // Initialize the modals and prevent close on click off
         $('.modal').modal({
             dismissible: false,
         });
@@ -301,7 +301,7 @@
 
         // Wait for the user to click the ok button on the bottom of the create / edit note moal
         $('#button__finish-create-edit-note').click(function() {
-            // Check if there is a note id passed to the model indicating the user is editing a note
+            // Check if there is a note id passed to the modal indicating the user is editing a note
             if ($('#modal_create-edit-note').attr('data-id')) {
                 // There is a note id passed to the modal
                 // Get the user's notes directory in the database
@@ -415,9 +415,9 @@
 
         // Listen for the user to click the open datepicker button and open the datepicker
         $('#button__open-work-due-date-picker').click(function() {
-            // Wait 250 milliseconds before closing
+            // Wait 250 milliseconds before opening
             setTimeout(function() {
-                // Simulate a click on the close button
+                // Simulate a click on the open button
                 $('#date__create-edit-work-due-date').trigger('click')
             }, 250);
         });
@@ -425,19 +425,19 @@
         $('#button__close-create-edit-work').click(function() {
             $('#modal__create-edit-work').modal('close');
             // Remove all possible data from textfields
+            $('.create-edit-work-field').val('');
             // Tell the textfields that they no longer have text
             $('#modal__create-edit-work label').removeClass('active');
-            $('.create-edit-work-field').val('');
             // Tell the textfields that there is no data to be valid
             $('.create-edit-work-field').removeClass('valid');
+            // Tell the text fields to resize
+            Materialize.updateTextFields();
             // Check if there is a work id tied to the modal
             if ($('#modal__create-edit-work').attr('data-id')) {
                 // There is a work id tied to the modal
                 // Remove the attribute
                 $('#modal__create-edit-work').removeAttr('data-id');
             }
-            // Tell the text fields to resize
-            Materialize.updateTextFields();
         });
         // Listen for a click on the finish-create-edit-work button
         $('#button__finish-create-edit-work').click(function() {
@@ -486,7 +486,6 @@
                                     // The work has been added to the database
                                     // Close the create-edit-work modal
                                     $('#modal__create-edit-work').modal('close');
-                                    // Tell the textfields that they no longer have text
                                     // Remove all text from the fields
                                     $('.create-edit-work-field').val('');
                                     // Tell the textfields that there is no data to be valid
@@ -665,7 +664,7 @@
                         }
                     });
             } else {
-                // There was no class code giver
+                // There was no class code given
                 // Ask to user to enter a code
                 Materialize.toast('Please supply a class join code!', 5000)
             }
@@ -972,8 +971,10 @@
         */
         // Initialize the Firebase app script
         firebase.initializeApp(FirebaseConfig);
-
-        firebase.auth().getRedirectResult().catch(FBErrorHandler);
+        // Handle redirect from Google login 
+        firebase.auth().getRedirectResult()
+            // Pass any errors to the handler
+            .catch(FBErrorHandler);
         // Wait for changed in the user authentication and fire on page load
         firebase.auth().onAuthStateChanged(function(user) {
             // There is a user account logged in
@@ -1359,7 +1360,7 @@
                                         firebase
                                         // Access the database
                                             .database()
-                                            // Get a reference to the classes directory
+                                            // Get a reference to the classes directory 
                                             .ref('/classes/')
                                             // Get the class
                                             .child(id)

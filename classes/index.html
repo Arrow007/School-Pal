@@ -252,10 +252,6 @@
                         <a class="right waves-effect waves-gray" v-on:click="editClass(cls.id,cls.details)" href="#" v-if="teacher">
                             <i class="material-icons purple-text">create</i>
                         </a>
-                        <!-- Create a button to view the people in a class -->
-                        <a class="right waves-effect waves-gray" v-on:click="viewPeople(cls.id)" href="#">
-                            <i class="material-icons">people</i>
-                        </a>
                         <!-- Create a element to contain the classes join code -->
                         <span class="right col l3 s12" v-if="teacher">Join Code | <b>{{ cls.id }}</b></span>
                     </div>
